@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Group 7</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Screens" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Index-(Background-Images)" transform="translate(-1494.000000, -1015.000000)">
+            <g id="Group-7" transform="translate(1512.000000, 1033.000000) rotate(90.000000) translate(-1512.000000, -1033.000000) translate(1494.000000, 1015.000000)">
+                <circle id="Oval" stroke="#006599" stroke-width="4" cx="18" cy="18" r="16"></circle>
+                <g id="arrow-up-solid" transform="translate(12.600000, 12.600000)" fill="#FBAD23" fill-rule="nonzero">
+                    <path d="M0.719198218,6.21781737 L0.185211581,5.68383073 C-0.0408908686,5.45772829 -0.0408908686,5.09211581 0.185211581,4.86841871 L4.85879733,0.192427617 C5.08489978,-0.033674833 5.45051225,-0.033674833 5.67420935,0.192427617 L10.3477951,4.86601336 C10.5738976,5.09211581 10.5738976,5.45772829 10.3477951,5.68142539 L9.81380846,6.21541203 C9.58530067,6.44391982 9.21247216,6.43910913 8.98877506,6.20579065 L6.2298441,3.30975501 L6.2298441,10.2227171 C6.2298441,10.5426281 5.97247216,10.8 5.65256125,10.8 L4.88285078,10.8 C4.56293987,10.8 4.30556793,10.5426281 4.30556793,10.2227171 L4.30556793,3.30975501 L1.54423163,6.20819599 C1.32053452,6.44391982 0.947706013,6.44873051 0.719198218,6.21781737 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

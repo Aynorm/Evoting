@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>newsletter</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Screens" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Index" transform="translate(-1336.000000, -3209.000000)" stroke-width="4">
+            <g id="newsletter" transform="translate(1338.000000, 3211.000000)">
+                <polyline id="Path" stroke="#006599" points="8 14.2 0 20 0 44 44 44 44 20 36 14.2"></polyline>
+                <polyline id="Path" stroke="#FBAD23" points="8 24.4 8 0 36 0 36 24.4"></polyline>
+                <path d="M0,20 L44,44" id="Path" stroke="#006599"></path>
+                <path d="M44,20 L22,32" id="Path" stroke="#006599"></path>
+                <path d="M16,10 L28,10" id="Path" stroke="#FBAD23"></path>
+                <path d="M16,18 L28,18" id="Path" stroke="#FBAD23"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="47px" viewBox="0 0 48 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>b-comment</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Screens" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Index" transform="translate(-536.000000, -3210.000000)" stroke-width="4">
+            <g id="b-comment" transform="translate(538.000000, 3212.000000)">
+                <path d="M19.164,36.997 C21.693,38.262 24.73,39 28,39 C29.179,39 30.326,38.898 31.432,38.716 L40,43 L40,34.919 C42.482,32.805 44,30.038 44,27 C44,25.962 43.824,24.958 43.494,24.001" id="Path" stroke="#006599"></path>
+                <path d="M20,0 C8.954,0 0,7.163 0,16 C0,19.594 1.499,22.9 4,25.571 L4,36 L13.665,31.167 C15.658,31.7 17.783,32 20,32 C31.046,32 40,24.837 40,16 C40,7.163 31.046,0 20,0 Z" id="Path" stroke="#FBAD23"></path>
+            </g>
+        </g>
+    </g>
+</svg>

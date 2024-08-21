@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Voting</title>
+    <link rel="stylesheet" href="evoting.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div style="display: flex; align-items: center">
+          <img
+            class="logo-icon"
+            src="pictures/real estate logo.png"
+            alt="logo"
+          />
+          <p>E-Voting</p>
+        </div>
+
+        <div class="input-div">
+          <input
+            class="help-input"
+            type="text"
+            placeholder="Can we help you?"
+          /><button class="search-icon-btn">
+            <img
+              class="search-btn"
+              src="pictures/vicon-header-search.svg"
+              alt="find"
+            />
+          </button>
+        </div>
+      </div>
+    </header>
+    <hr />
+
+    <div
+      style="
+        display: grid;
+        grid-template-columns: 50px 1fr 100px;
+        align-items: center;
+        background-color: white;
+      "
+    >
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#">Home</a>
+        <a href="http://127.0.0.1:5500/edashboard.html">Internet Voting</a>
+        <a href="#">Education</a>
+        <a href="#">Events</a>
+        <a href="#">Clients</a>
+        <a href="#">Services</a>
+        <a href="#">Pricing</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <div>
+          <a href="#"
+            ><button
+              style="width: 100%"
+              class="log-in"
+              onclick="document.getElementById('id01').style.display='block'"
+              class="log-in"
+            >
+              Log in
+            </button></a
+          >
+        </div>
+      </div>
+      <div id="main">
+        <button class="openbtn" onclick="openNav()">☰</button>
+      </div>
+
+      <div
+        class="general-topbar"
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 5px 0px 5px 0px;
+          background-color: white;
+        "
+      >
+        <div class="topnav">
+          <a class="a-no-pad" href=""
+            ><img
+              class="home-head"
+              src="pictures/vicon-header-home.svg"
+              alt="home"
+          /></a>
+          <a href="http://127.0.0.1:5500/edashboard.html">Internet Voting</a>
+          <a href="#">Education</a>
+          <a href="#">Events</a>
+          <a href="#">Clients</a>
+          <a href="http://127.0.0.1:5500/eservices.html">Services</a>
+          <a href="#">Pricing</a>
+          <a href="http://127.0.0.1:5500/eabout.html">About</a>
+          <a href="http://127.0.0.1:5500/econtact.html?">Contact</a>
+        </div>
+        <div class="sign-in-div">
+          <a href="#"
+            ><button
+              onclick="document.getElementById('id01').style.display='block'"
+              class="log-in"
+            >
+              Sign in
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!--Modal-->
+
+    <div id="id01" class="modal">
+      <form
+        class="modal-content animate"
+        action="/action_page.php"
+        method="post"
+      >
+        <div class="imgcontainer">
+          <span
+            onclick="document.getElementById('id01').style.display='none'"
+            class="close"
+            title="Close Modal"
+            >&times;</span
+          >
+          <img src="pictures/ay passport.jpg" alt="Avatar" class="avatar" />
+        </div>
+
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input
+            type="text"
+            placeholder="Enter Username"
+            name="uname"
+            required
+          />
+
+          <label for="psw"><b>Password</b></label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="psw"
+            required
+          />
+
+          <button class="all-btn" type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember" /> Remember
+            me
+          </label>
+        </div>
+
+        <div class="container" style="background-color: #f1f1f1">
+          <button
+            type="button"
+            onclick="document.getElementById('id01').style.display='none'"
+            class="cancelbtn all-btn"
+          >
+            Cancel
+          </button>
+          <span class="psw"
+            >Forgot <a style="color: orange" href="#">password?</a></span
+          >
+        </div>
+      </form>
+    </div>
+
+    <!--
+    <div class="nav-container">
+      <ul>
+        <li><img src="pictures/vicon-header-home.svg" alt="home" /></li>
+        <li>About</li>
+        <li>Business</li>
+        <li>Election</li>
+        <li>Campaign</li>
+        <li>News</li>
+        <li>Events</li>
+        <li>Contact</li>
+      </ul>
+    </div>-->
+    <hr />
+
+    <section>
+      <!--Slideshow-->
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img class="slide-img" src="pictures/online-voting-slider.jpg" />
+          <div class="text">Caption Text</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img class="slide-img" src="pictures/education-voting-slider.jpg" />
+          <div class="text">Caption Two</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img class="slide-img" src="pictures/other-voting-slider.jpg" />
+          <div class="text">Caption Three</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
+      <br />
+
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+      <hr />
+      <!--Countdown-->
+      <div class="count-down-div">
+        <p class="time-left">Time Left Until Election Day</p>
+        <p class="count-down" id="count"></p>
+        <p class="time-left">January 10, 2030</p>
+      </div>
+      <hr />
+      <br />
+
+      <div style="text-align: center; margin-bottom: 20px">
+        <h2>WHY CHOOSE US?</h2>
+        <p>
+          We take democracy seriously. Find out why our clients consistently
+          rely on us for their election needs.
+        </p>
+      </div>
+
+      <div class="business-container">
+        <!--
+        <div class="business">
+          <img
+            class="business-img"
+            src="pictures/vicon-business.png"
+            alt="business"
+          />
+          <h2>Business</h2>
+          <p>Learn More</p>
+        </div>
+
+        <div class="business">
+          <img
+            class="business-img"
+            src="pictures/vicon-notary-apostille.png"
+            alt="notary"
+          />
+          <h2>Notary</h2>
+          <p>Learn More</p>
+        </div>
+
+        <div class="business">
+          <img
+            class="business-img"
+            src="pictures/vicon-registries.png"
+            alt="Registries"
+          />
+          <h2>Registries</h2>
+          <p>Learn More</p>
+        </div>
+
+        <div class="business">
+          <img
+            class="business-img"
+            src="pictures/vicon-elections.png"
+            alt="election"
+          />
+          <h2>Election</h2>
+          <p>Learn More</p>
+        </div>
+
+        <div class="business">
+          <img
+            class="business-img"
+            src="pictures/vicon-archives.png"
+            alt="archive"
+          />
+          <h2>Archives</h2>
+          <p>Learn More</p>
+        </div>-->
+
+        <div class="business alt-business">
+          <img
+            class="business-img"
+            src="pictures/flexible-and-simple-to-use.png"
+            alt="safe"
+          />
+          <h2>Flexible and Simple to Use</h2>
+          <p>
+            24 x 7 x 365 Support Simple and Accessible Voter Experience
+            Internet, Phone, and Paper Ballots
+          </p>
+        </div>
+
+        <div class="business alt-business">
+          <img
+            class="business-img"
+            src="pictures/secure-and-reliable.png"
+            alt="campaign"
+          />
+          <h2>Secure and Reliable</h2>
+          <p>
+            Third Party Audits & Certifications Voter-Verified Results 100%
+            Availability Guarantee
+          </p>
+        </div>
+
+        <div class="business alt-business">
+          <img
+            class="business-img"
+            src="pictures/industry-specific-expertise.png"
+            alt="news"
+          />
+          <h2>Industry-Specific Expertise</h2>
+          <p>
+            Self Administered or Fully Managed Elections Professional Electoral
+            Services Custom Voting Technology
+          </p>
+        </div>
+      </div>
+      <hr />
+      <br />
+
+      <div class="client-div">
+        <div class="client alt-client">
+          <img
+            class="client-img"
+            src="pictures/political-party-elections.jpg"
+            alt="clients"
+          />
+          <p class="pbold">Education</p>
+        </div>
+
+        <div class="client alt-client">
+          <img
+            class="client-img"
+            src="pictures/corporate-elections.jpg"
+            alt="clients"
+          />
+          <p class="pbold">Co-operative</p>
+        </div>
+
+        <div class="client alt-client">
+          <img
+            class="client-img"
+            src="pictures/union-elections.jpg"
+            alt="clients"
+          />
+          <p class="pbold">Union</p>
+        </div>
+
+        <!-- 
+        <div class="client alt-client">
+          <img
+            class="client-img"
+            src="pictures/association-elections.jpg"
+            alt="clients"
+          />
+        </div>
+        
+        <div class="client alt-client">
+          <img
+            class="client-img"
+            src="pictures/education-elections.jpg"
+            alt="clients"
+          />
+        </div>
+
+        <div class="client alt-client">
+          <img
+            class="client-img"
+            src="pictures/other-elections.jpg"
+            alt="clients"
+          />
+        </div>-->
+      </div>
+      <hr />
+
+      <div style="text-align: center; justify-content: center">
+        <h1 style="text-align: center">OUR CLIENTS</h1>
+        <p>We have been transformin the election proccess since 2020</p>
+      </div>
+
+      <div class="ndp-container">
+        <div class="ndp">
+          <img class="ndp-img" src="pictures/vndp-150x37.png" alt="ndp" />
+        </div>
+        <div class="ndp">
+          <img
+            class="ndp-img"
+            src="pictures/vcalifornia-teachers-association-84x75.png"
+            alt="ndp"
+          />
+        </div>
+        <div class="ndp">
+          <img
+            class="ndp-img"
+            src="pictures/vcanadian-football-league-players-association-112x75.jpg"
+            alt="ndp"
+          />
+        </div>
+        <div class="ndp">
+          <img
+            class="ndp-img"
+            src="pictures/vMichigan-State-University-65x75.png"
+            alt="ndp"
+          />
+        </div>
+        <div class="ndp">
+          <img class="ndp-img" src="pictures/vlogo-IATA-120x75.png" alt="ndp" />
+        </div>
+        <div class="ndp">
+          <img
+            class="ndp-img"
+            src="pictures/vrotary-international-150x56.png"
+            alt="ndp"
+          />
+        </div>
+      </div>
+      <hr />
+      <br />
+
+      <div class="call-div">
+        <div class="call">
+          <img class="call-img" src="pictures/vicon-call.svg" alt="call" />
+          <h1>Call Us</h1>
+          <div class="yellow-line"><p class="line"></p></div>
+          <button class="call-btn">
+            <a class="call-color" href="#">(919) 457-4567</a>
+          </button>
+        </div>
+
+        <div class="call color">
+          <img class="call-img" src="pictures/vicon-updates.svg" alt="call" />
+          <h1>Receive Updates</h1>
+          <div class="yellow-line"><p class="line"></p></div>
+          <button class="call-btn">
+            <a class="call-color" href="#">Sign up for e-updates</a>
+          </button>
+        </div>
+
+        <div class="call">
+          <img class="call-img" src="pictures/vicon-write.svg" alt="call" />
+          <h1>Write Us</h1>
+          <div class="yellow-line"><p class="line"></p></div>
+          <button class="call-btn">
+            <a class="call-color" href="#">Agency Contacts</a>
+          </button>
+        </div>
+      </div>
+    </section>
+    <hr />
+    <br />
+
+    <footer>
+      <div class="agency-div">
+        <div class="agency">
+          <h3>Agency</h3>
+          <p><a href="#">Home</a></p>
+          <p><a href="#">About</a></p>
+          <p><a href="#">Pricing</a></p>
+          <p><a href="#">Internet Voting</a></p>
+          <p><a href="#">Education</a></p>
+          <p><a href="#">Contact Us</a></p>
+        </div>
+
+        <div class="agency">
+          <h3>Resources</h3>
+          <p><a href="#">Contracting Opportunities</a></p>
+          <p><a href="#">Career Opportunities</a></p>
+          <p><a href="#">Site Maintainance Schedule</a></p>
+          <p><a href="#">Public Record Act Requests</a></p>
+          <p><a href="#">Site Map</a></p>
+        </div>
+
+        <div class="agency">
+          <h3>Address</h3>
+          <p>1500 11th Street Sacramento, California 95814</p>
+          <p><a href="#">(916) 654-8654</a></p>
+
+          <ul class="media">
+            <li>
+              <a href="#">
+                <img
+                  class="social-media-icon"
+                  src="pictures/7.facebook.png"
+                  alt="facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  class="social-media-icon"
+                  src="pictures/9.twitter.png"
+                  alt="twitter"
+              /></a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  class="social-media-icon"
+                  src="pictures/12.youtube.png"
+                  alt="youtube"
+              /></a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  class="social-media-icon"
+                  src="pictures/8.instagram.png"
+                  alt="instagram"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!--Javascricp-->
+    <script src="evoting.js"></script>
+  </body>
+</html>

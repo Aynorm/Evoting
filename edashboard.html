@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="edashboard.css" />
+    <link rel="stylesheet" href="" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="admin-all-container">
+      <!-- <div><h1>Admistrator Dashboard</h1></div> -->
+
+      <style>
+        .contest-banner-div {
+        }
+
+        .constest-banner-img {
+          width: 100%;
+          max-width: 800px;
+          border-radius: 10p;
+          border: 1px solid black;
+          padding: 10px;
+        }
+
+        .contestant-banner-paragraph {
+          font-size: 1.5em;
+          background-color: hsl(180, 100%, 25%, 0.03);
+          padding: 30px 10px 30px 10px;
+          margin: 10px;
+        }
+      </style>
+
+      <div class="contest-banner-div">
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-between;
+          "
+        >
+          <h1>FACE OF SOCIAL MEDIA 2030</h1>
+          <div>
+            <h2>DATE: <span>Sat January 2030</span></h2>
+            <h2>TIME: <span>00:00</span></h2>
+          </div>
+        </div>
+        <div style="text-align: center">
+          <img
+            class="constest-banner-img"
+            src="pictures/facesocial1.jpg"
+            alt="contest"
+          />
+        </div>
+
+        <p class="contestant-banner-paragraph">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+          nam exercitationem non illum cumque! Consectetur, blanditiis. Quis sit
+          rerum doloremque tempore, quae consequuntur autem, quasi quidem
+          temporibus perferendis neque error!
+        </p>
+      </div>
+
+      <!-- <div class="admin-short-container">
+        <div class="admin-div">
+          <div class="h1-p-div">
+            <h1 class="admin-h1">4</h1>
+            <p class="admin-paragraph">No. of positions</p>
+          </div>
+        </div>
+
+        <div class="admin-div bg-pink">
+          <div class="h1-p-div">
+            <h1 class="admin-h1">12</h1>
+            <p class="admin-paragraph">No. of candidates</p>
+          </div>
+        </div>
+
+        <div class="admin-div bg-black">
+          <div class="h1-p-div">
+            <h1 class="admin-h1">22</h1>
+            <p class="admin-paragraph">Total Voters</p>
+          </div>
+        </div>
+
+        <div class="admin-div bg-brown">
+          <div class="h1-p-div">
+            <h1 class="admin-h1">24</h1>
+            <p class="admin-paragraph">Voters Voted</p>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Contestant -->
+      <h1 style="margin: 10px 0px 10px 0px">Vote for Your Favorite</h1>
+      <div
+        class="contestant-container"
+        style="background-color: hsl(0, 0%, 0%, 0.4)"
+      >
+        <div class="contestant-div">
+          <p class="constestant-paragraph">Adeola Mariam</p>
+          <img
+            class="contestant-img"
+            src="pictures/mariam 2x2.jpg"
+            alt="contestant"
+          /><br />
+
+          <div id="myVote" class="soverlay">
+            <a href="javascript:void(0)" class="sclosebtn" onclick="closeVote()"
+              >&times;</a
+            >
+            <div class="soverlay-content">
+              <img
+                class="sfirst-const-img"
+                src="pictures/mariam 2x2.jpg"
+                alt="Option"
+              />
+              <p class="sfirst-const-paragraph">Adeola Mariam</p>
+
+              <p>1 x $1.04 = $1.05 (incl. VAT)</p>
+
+              <hr />
+              <div class="sSpace between" style="height: 250px"></div>
+              <hr />
+              <h3>Subtotal: $1.05 (include. VAT)</h3>
+              <button class="make-payment-btn" onclick="vote('Option 1')">
+                Make Payment
+              </button>
+            </div>
+          </div>
+          <span class="sconst-btn" onclick="openVote()"> Vote</span>
+        </div>
+
+        <!--<div class="contestant-div">
+          <p class="constestant-paragraph">Andy Smith</p>
+          <img
+            class="contestant-img"
+            src="pictures/andy smith.jpeg"
+            alt="contestant"
+          /><br />
+
+          <div id="myVote" class="soverlay">
+            <a href="javascript:void(0)" class="sclosebtn" onclick="closeVote()"
+              >&times;</a
+            >
+            <div class="soverlay-content">
+              <img
+                class="sfirst-const-img"
+                src="pictures/andy smith.jpeg"
+                alt="Option"
+              />
+              <p class="sfirst-const-paragraph">Andy Smith</p>
+
+              <p>1 x $1.04 = $1.05 (incl. VAT)</p>
+
+              <hr />
+              <div class="sSpace between" style="height: 250px"></div>
+              <hr />
+              <h3>Subtotal: $1.05 (include. VAT)</h3>
+              <button class="sconst-btn" onclick="vote('Option 2')">
+                Make Payment
+              </button>
+            </div>
+          </div>
+          <span class="sconst-btn" onclick="openVote()"> Vote</span>
+        </div> -->
+
+        <div class="contestant-div">
+          <p class="constestant-paragraph">Andy Smith</p>
+          <img
+            class="contestant-img"
+            src="pictures/andy smith.jpeg"
+            alt="contestant"
+          /><br />
+          <div id="myVote1" class="soverlay">
+            <a
+              href="javascript:void(0)"
+              class="sclosebtn"
+              onclick="closeVote1()"
+              >&times;</a
+            >
+            <div class="soverlay-content">
+              <img
+                class="sfirst-const-img"
+                src="pictures/andy smith.jpeg"
+                alt="Option"
+              />
+              <p class="sfirst-const-paragraph">Andy Smith</p>
+
+              <p>1 x $1.04 = $1.05 (incl. VAT)</p>
+
+              <hr />
+              <div class="sSpace between" style="height: 250px"></div>
+              <hr />
+              <h3>Subtotal: $1.05 (include. VAT)</h3>
+              <button class="make-payment-btn" onclick="vote('Option 2')">
+                Make Payment
+              </button>
+            </div>
+          </div>
+          <span class="sconst-btn" onclick="openVote1()"> Vote</span>
+
+          <!-- <button class="sconst-btn" onclick="vote('Option 2')">Vote</button> -->
+        </div>
+
+        <div class="contestant-div">
+          <p class="constestant-paragraph">Afolake Olaore</p>
+          <img
+            class="contestant-img"
+            src="pictures/mom 2x2.jpg"
+            alt="contestant"
+          /><br />
+          <div id="myVote2" class="soverlay">
+            <a
+              href="javascript:void(0)"
+              class="sclosebtn"
+              onclick="closeVote2()"
+              >&times;</a
+            >
+            <div class="soverlay-content">
+              <img
+                class="sfirst-const-img"
+                src="pictures/mom 2x2.jpg"
+                alt="Option"
+              />
+              <p class="sfirst-const-paragraph">Afolake Olaore</p>
+
+              <p>1 x $1.04 = $1.05 (incl. VAT)</p>
+
+              <hr />
+              <div class="sSpace between" style="height: 250px"></div>
+              <hr />
+              <h3>Subtotal: $1.05 (include. VAT)</h3>
+              <button class="make-payment-btn" onclick="vote('Option 3')">
+                Make Payment
+              </button>
+            </div>
+          </div>
+          <span class="sconst-btn" onclick="openVote2()">Vote</span>
+          <!-- <button onclick="vote('Option 3')">Vote</button> -->
+        </div>
+
+        <div class="contestant-div">
+          <p class="constestant-paragraph">Yemisi Toyosi</p>
+          <img
+            class="contestant-img"
+            src="pictures/yemi 2x2.jpg"
+            alt="contestant"
+          /><br />
+          <div id="myVote3" class="soverlay">
+            <a
+              href="javascript:void(0)"
+              class="sclosebtn"
+              onclick="closeVote3()"
+              >&times;</a
+            >
+            <div class="soverlay-content">
+              <img
+                class="sfirst-const-img"
+                src="pictures/yemi 2x2.jpg"
+                alt="Option"
+              />
+              <p class="sfirst-const-paragraph">Yemisi Toyosi</p>
+
+              <p>1 x $1.04 = $1.05 (incl. VAT)</p>
+
+              <hr />
+              <div class="sSpace between" style="height: 250px"></div>
+              <hr />
+              <h3>Subtotal: $1.05 (include. VAT)</h3>
+              <button class="make-payment-btn" onclick="vote('Option 4')">
+                Make Payment
+              </button>
+            </div>
+          </div>
+          <span class="sconst-btn" onclick="openVote3()">Vote</span>
+          <!-- <button onclick="vote('Option 4')">Vote</button> -->
+        </div>
+
+        <div class="contestant-div">
+          <p class="constestant-paragraph">Taleeb Ayobami</p>
+          <img
+            class="contestant-img"
+            src="pictures/DSC_0099 2x2.png"
+            alt="contestant"
+          /><br />
+          <div id="myVote4" class="soverlay">
+            <a
+              href="javascript:void(0)"
+              class="sclosebtn"
+              onclick="closeVote4()"
+              >&times;</a
+            >
+            <div class="soverlay-content">
+              <img
+                class="sfirst-const-img"
+                src="pictures/DSC_0099 2x2.png"
+                alt="Option"
+              />
+              <p class="sfirst-const-paragraph">Taleeb Ayobami</p>
+
+              <p>1 x $1.04 = $1.05 (incl. VAT)</p>
+
+              <hr />
+              <div class="sSpace between" style="height: 250px"></div>
+              <hr />
+              <h3>Subtotal: $1.05 (include. VAT)</h3>
+              <button class="make-payment-btn" onclick="vote('Option 5')">
+                Make Payment
+              </button>
+            </div>
+          </div>
+          <span class="sconst-btn" onclick="openVote4()">Vote</span>
+          <!-- <button onclick="vote('Option 5')">Vote</button> -->
+        </div>
+      </div>
+
+      <!-- Result files -->
+      <div class="result-container overlay" id="myNav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <h2>Results</h2>
+        <div id="results" style="padding-top: 50px">
+          <div class="contestant-score overlay-content">
+            <h3>Adeola Mariam:</h3>
+            <h3 class="result-1" id="option1-count">0</h3>
+            <h3>Votes</h3>
+          </div>
+
+          <div class="contestant-score">
+            <h3>Andy Smith:</h3>
+            <h3 class="result-1" id="option2-count">0</h3>
+            <h3>Votes</h3>
+          </div>
+
+          <div class="contestant-score">
+            <h3>Afolake Olaore:</h3>
+            <h3 class="result-1" id="option3-count">0</h3>
+            <h3>Votes</h3>
+          </div>
+
+          <div class="contestant-score">
+            <h3>Yemisi Toyosi:</h3>
+            <h3 class="result-1" id="option4-count">0</h3>
+            <h3>Votes</h3>
+          </div>
+
+          <div class="contestant-score">
+            <h3>Taleeb Ayobami:</h3>
+            <h3 class="result-1" id="option5-count">0</h3>
+            <h3>Votes</h3>
+          </div>
+        </div>
+      </div>
+      <span style="font-size: 30px; cursor: pointer" onclick="openNav()"
+        >Live Results</span
+      >
+    </div>
+
+    <script src="edashboard.js"></script>
+
+    <style>
+      @media screen and (max-height: 450px) {
+        .soverlay a {
+          font-size: 20px;
+        }
+        .soverlay .sclosebtn {
+          font-size: 40px;
+          top: 15px;
+          right: 35px;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: hsl(0, 0%, 0%, 0.3);
+      }
+      div,
+      h1,
+      h2,
+      h3,
+      h4,
+      p {
+        margin: 0%;
+        padding: 0%;
+      }
+      .soverlay {
+        height: 100%;
+        width: 0;
+        max-width: 400px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: hsl(0, 0%, 100%, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+        backdrop-filter: blur(5px);
+      }
+
+      .soverlay-content {
+        position: relative;
+        top: 10%;
+        width: 100%;
+        text-align: center;
+        /* margin-left: 10px; */
+        /* background-color: whitesmoke; */
+      }
+
+      .soverlay a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+
+      .soverlay a:hover,
+      .soverlay a:focus {
+        color: #f1f1f1;
+      }
+
+      .soverlay .sclosebtn {
+        position: absolute;
+        top: 1px;
+        right: 5px;
+        font-size: 30px;
+      }
+
+      .sfirst-const-img {
+        width: 50%;
+        border-radius: 10px;
+      }
+
+      .sfirst-const-paragraph {
+        font-size: 25px;
+        font-weight: 500;
+        margin: 5px;
+      }
+
+      .make-payment-btn {
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        width: 150px;
+        height: 40px;
+        margin: 5px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .make-payment-btn:hover {
+        background-color: gray;
+      }
+    </style>
+  </body>
+</html>

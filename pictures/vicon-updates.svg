@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="40px" viewBox="0 0 48 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>email-outline-48</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Screens" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Index" transform="translate(-936.000000, -3220.000000)" stroke-width="4">
+            <g id="email-outline-48" transform="translate(938.000000, 3222.000000)">
+                <polyline id="Path" stroke="#FBAD23" points="37 7 22 22 7 7"></polyline>
+                <rect id="Rectangle" stroke="#FFFFFF" x="0" y="0" width="44" height="36" rx="4"></rect>
+                <path d="M14,22 L7,29" id="Path" stroke="#FBAD23"></path>
+                <path d="M30,22 L37,29" id="Path" stroke="#FBAD23"></path>
+            </g>
+        </g>
+    </g>
+</svg>
