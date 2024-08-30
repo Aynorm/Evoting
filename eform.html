@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eform</title>
+
+    <style>
+      body {
+        font-size: 1.2rem;
+        padding: 10px;
+        background-color: whitesmoke;
+      }
+
+      li {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .general-form {
+        background-color: whitesmoke;
+      }
+
+      .fsocial-media-icon {
+        width: 50px;
+        padding-left: 10px;
+      }
+
+      .discription-btn {
+        border: none;
+        border-radius: 10px;
+        color: white;
+        background-color: black;
+        font-weight: 900;
+        cursor: pointer;
+        padding: 10px 15px 10px 15px;
+      }
+
+      .discription-btn:hover {
+        background-color: hsl(0, 0%, 0%, 0.7);
+      }
+
+      .discription-btn:active {
+        background-color: gray;
+      }
+
+      .winner-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+      }
+      .winner-div {
+        flex-grow: 1;
+        flex-basis: 200;
+        width: 300px;
+        color: white;
+        padding: 5px;
+        border-radius: 10px;
+      }
+
+      .winner-div:hover {
+        background-color: hsl(0, 0%, 0%, 0.7);
+      }
+      .winner {
+        background-color: hsl(120, 100%, 25%, 0.7);
+      }
+      .runner1 {
+        background-color: hsl(80, 61%, 50%, 0.7);
+      }
+      .runner2 {
+        background-color: hsl(0, 100%, 50%, 0.7);
+      }
+      .runner3 {
+        background-color: hsl(180, 100%, 25%, 0.7);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="general-form">
+      <marquee behavior="" direction="left"
+        ><div style="display: flex; column-gap: 50px">
+          <h1>PRICE:<span>FREE</span></h1>
+          <h1>PRICE:<span>FREE</span></h1>
+          <h1>PRICE:<span>FREE</span></h1>
+          <h1>PRICE:<span>FREE</span></h1>
+        </div>
+      </marquee>
+
+      <div
+        class="face-div"
+        style="display: flex; gap: 10px; justify-content: center"
+      >
+        <div>
+          <img
+            style="width: 100%; max-width: 400px"
+            src="pictures/facesocial.jpg"
+            alt="face"
+          />
+        </div>
+
+        <div>
+          <h1>
+            FACE OF SOCIAL MEDIA 2020 <br /><span>(online voting Contest)</span>
+          </h1>
+          <p>Organised by : Aynorms Media</p>
+          <h2>DATE: <span>Sat April 18 2020</span></h2>
+          <h2>TIME:<span>06:06</span></h2>
+          <p>Share Contest</p>
+
+          <ul class="media" style="display: flex; margin-left: -50px">
+            <li>
+              <img
+                class="fsocial-media-icon"
+                src="pictures/7.facebook.png"
+                alt="fb"
+              />
+            </li>
+            <li>
+              <img
+                class="fsocial-media-icon"
+                src="pictures/7.facebook.png"
+                alt="twitter"
+              />
+            </li>
+            <li>
+              <img
+                class="fsocial-media-icon"
+                src="pictures/7.facebook.png"
+                alt="telegram"
+              />
+            </li>
+            <li>
+              <img
+                class="fsocial-media-icon"
+                src="pictures/10.whatsapp.png"
+                alt="whatsapp"
+              />
+            </li>
+            <li>
+              <img
+                class="fsocial-media-icon"
+                src="pictures/7.facebook.png"
+                alt="email"
+              />
+            </li>
+          </ul>
+          <div
+            style="display: flex; flex-wrap: wrap; gap: 5px; text-align: center"
+          >
+            <button class="discription-btn">Form description</button>
+            <button class="discription-btn">Organizer details</button>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="details-form-general">
+        <div class="details-container">
+          <div class="details-div">
+            <h1>Details</h1>
+            <p>Aynorm Media</p>
+          </div>
+          <div class="present-div">
+            <p><strong>Present</strong></p>
+            <p>Face of Social media 2030</p>
+            <p>Online Voting...</p>
+            <p>Form is free</p>
+            <p>The contest is open to all Ladies from 17-30 years</p>
+
+            <style></style>
+            <div class="winner-container">
+              <div class="winner-div winner">
+                <h2>WINNER</h2>
+                <p>
+                  Thirty thousand (30k) + 1 year subscription in any network
+                </p>
+              </div>
+
+              <div class="winner-div runner1">
+                <h2>1st RUNNER</h2>
+                <p>
+                  Fiftenn thousand (15k) + 1 year subscription. subscription.
+                </p>
+              </div>
+
+              <div class="winner-div runner2">
+                <h2>2nd RUNNER</h2>
+                <p>A year subscription.</p>
+              </div>
+
+              <div class="winner-div runner3">
+                <h2>3rd RUNNER</h2>
+                <p>Six months subscription.</p>
+              </div>
+            </div>
+
+            <!-- <div
+              style="background-color: orange; display: flex; flex-wrap: wrap; gap: 5px"
+            >
+              <div style="background-color: green">
+                <h2>WINNER</h2>
+                <p>
+                  30k + 1 year subscription in any network & other endorsements
+                </p>
+              </div>
+
+              <div style="background-color: yellowgreen">
+                <h2>1st RUNNER</h2>
+                <p>
+                  15k + 1 year subscription. 2nd runner up 10+1 year
+                  subscription.
+                </p>
+              </div>
+
+              <div style="background-color: red">
+                <h2>2nd RUNNER</h2>
+                <p>1 year subscription.</p>
+              </div>
+            </div>-->
+
+            <div class="enquiry-div">
+              <p>For more Enquiries</p>
+              <p>media@aynorm.com</p>
+              <p>Call <span>08140156931</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-container">
+          <form action="">
+            <h1>Registration Form</h1>
+
+            <label for="">Enter the following details and cotinue</label><br />
+            <input type="email" name="email" placeholder="Email Address" />
+
+            <h1>FACE OF SOCIAL MEDIA 2020</h1>
+            <h2>How to Register</h2>
+
+            <input type="text" placeholder="Full Name" /><br />
+
+            <input type="text" placeholder="WhatsApp No." /><br />
+
+            <input type="number" name="numbertext" placeholder="Age" /><br />
+
+            <input type="text" placeholder="Location" /><br />
+
+            <textarea name="" id="" placeholder="Short Bio:"></textarea><br />
+
+            <label for="">Picture</label><br />
+            <input type="file" name="picture" />
+            <button class="discription-btn">Submit</button>
+
+            <p>
+              OR Send Your Full name(nickname), Age, Location, Picture. via
+              WhatsApp; 09060986597.
+            </p>
+            <marquee behavior="" direction="left">Form Open</marquee>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      @media only screen and (max-width: 700px) {
+        .details-form-general {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .face-div {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        h1,
+        h2 {
+          font-size: larger;
+        }
+        p {
+          font-size: small;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      div,
+      h1,
+      h2,
+      h3,
+      h4,
+      p {
+        margin: 10px 0px 10px 0px;
+        padding: 0%;
+      }
+
+      input {
+        width: 100%;
+        height: 30px;
+        margin-bottom: 10px;
+        padding: 0px 0px 0px 10px;
+        border: none;
+        background-color: hsl(0, 0%, 0%, 0.1);
+      }
+
+      textarea {
+        width: 100%;
+        height: 80px;
+      }
+      .details-form-general {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .details-container {
+        width: 100%;
+      }
+
+      .form-container {
+        width: 100%;
+        padding: 20px 10px 20px 10px;
+        border: 1px solid black;
+      }
+    </style>
+  </body>
+</html>

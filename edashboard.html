@@ -12,25 +12,7 @@
     <div class="admin-all-container">
       <!-- <div><h1>Admistrator Dashboard</h1></div> -->
 
-      <style>
-        .contest-banner-div {
-        }
-
-        .constest-banner-img {
-          width: 100%;
-          max-width: 800px;
-          border-radius: 10p;
-          border: 1px solid black;
-          padding: 10px;
-        }
-
-        .contestant-banner-paragraph {
-          font-size: 1.5em;
-          background-color: hsl(180, 100%, 25%, 0.03);
-          padding: 30px 10px 30px 10px;
-          margin: 10px;
-        }
-      </style>
+      <style></style>
 
       <div class="contest-banner-div">
         <div
@@ -390,6 +372,25 @@
         margin: 0%;
         padding: 0%;
       }
+
+      .contest-banner-div {
+      }
+
+      .constest-banner-img {
+        width: 100%;
+        max-width: 800px;
+        border-radius: 10p;
+        border: 1px solid black;
+        padding: 10px;
+      }
+
+      .contestant-banner-paragraph {
+        font-size: 1.5em;
+        background-color: hsl(180, 100%, 25%, 0.03);
+        padding: 30px 10px 30px 10px;
+        margin: 10px;
+      }
+
       .soverlay {
         height: 100%;
         width: 0;
@@ -460,6 +461,278 @@
       .make-payment-btn:hover {
         background-color: gray;
       }
+
+      .admin-all-container {
+        padding-top: 30px;
+        width: 100%;
+        background-color: hsl(0, 0%, 96%, 0.7);
+      }
+      .admin-short-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      .admin-div {
+        flex-grow: 1;
+        flex-basis: 200;
+      }
+
+      .admin-div {
+        width: 25%;
+        max-width: 300px;
+        min-width: 250px;
+        height: 120px;
+        border-radius: 5px;
+        background-image: url(pictures/colorful-blank-paper-texture-background-free-photo.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .bg-pink {
+        border-radius: 5px;
+        background-image: url(pictures/colo-pink.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .bg-black {
+        border-radius: 5px;
+        background-image: url(pictures/colo-black.jpeg);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .bg-brown {
+        border-radius: 5px;
+        background-image: url(pictures/colo-brown.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .h1-p-div {
+        padding: 5px 5px 30px 30px;
+        backdrop-filter: blur(3px);
+        border-radius: 10px;
+      }
+
+      .admin-h1 {
+        font-size: 4em;
+        font-weight: 700;
+        color: white;
+        width: 100px;
+      }
+
+      .admin-paragraph {
+        font-weight: 700;
+        font-size: 1em;
+        color: white;
+      }
+      .sconst-btn {
+        background-color: white;
+        color: black;
+        border: none;
+        font-size: 20px;
+        border-radius: 5px;
+        width: 50%;
+        height: 30px;
+        font-weight: 700;
+        cursor: pointer;
+        padding: 10px 20px 10px 20px;
+      }
+
+      .sconst-btn:hover {
+        background-color: black;
+        color: white;
+      }
+
+      .contestant-container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 70px 20px 70px 20px;
+        gap: 10px;
+        text-align: center;
+      }
+
+      .contestant-div {
+        flex-grow: 1;
+        flex-basis: 00;
+      }
+
+      .contestant-img {
+        width: 200px;
+        border-radius: 10px;
+        border: 1px solid white;
+      }
+
+      .constestant-paragraph {
+        color: black;
+        font-weight: 700;
+        font-size: 1.5em;
+        text-align: center;
+        padding: 0%;
+        margin: 0%;
+      }
+
+      .result-1 {
+        width: 200p;
+        height: 40px;
+        background: hsl(180, 100%, 25%, 0.1);
+        font-size: 40px;
+      }
+
+      .contestant-score {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        border: 1px solid rgb(201, 226, 226);
+        margin-bottom: 5px;
+      }
+
+      div,
+      h1,
+      h2,
+      h3,
+      h4,
+      p {
+        padding: 0%;
+        margin: 0%;
+      }
+
+      .result-container {
+        background-color: aliceblue;
+      }
+
+      /*Result Overlay hide*/
+      .overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        /* background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9); */
+        overflow-x: hidden;
+        transition: 0.5s;
+      }
+
+      .overlay-content {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        /* text-align: center; */
+        margin-top: 30px;
+      }
+
+      .overlay a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+
+      .overlay a:hover,
+      .overlay a:focus {
+        color: #f1f1f1;
+      }
+
+      .overlay .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+      }
+
+      @media screen and (max-height: 450px) {
+        .overlay a {
+          font-size: 20px;
+        }
+
+        .overlay .closebtn {
+          font-size: 40px;
+          top: 15px;
+          right: 35px;
+        }
+      }
     </style>
+
+    <script>
+      // script.js
+
+      // Initialize vote counts
+      let votes = {
+        "Option 1": 0,
+        "Option 2": 0,
+        "Option 3": 0,
+        "Option 4": 0,
+        "Option 5": 0,
+
+      };
+
+      // Function to handle voting
+      function vote(option) {
+        votes[option]++;
+        updateResults();
+      }
+
+      // Function to update the results display
+      function updateResults() {
+        document.getElementById("option1-count").innerText = votes["Option 1"];
+        document.getElementById("option2-count").innerText = votes["Option 2"];
+        document.getElementById("option3-count").innerText = votes["Option 3"];
+        document.getElementById("option4-count").innerText = votes["Option 4"];
+        document.getElementById("option5-count").innerText = votes["Option 5"];
+      }
+
+//Result overlay hide  
+      function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+      }
+      function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+}
+      
+// For my Vote
+      function openVote() {
+        document.getElementById("myVote").style.width = "100%";
+      }
+      function closeVote() {
+        document.getElementById("myVote").style.width = "0%";
+}
+
+      function openVote1() {
+        document.getElementById("myVote1").style.width = "100%";
+      }
+      function closeVote1() {
+        document.getElementById("myVote1").style.width = "0%";
+}
+
+      function openVote2() {
+        document.getElementById("myVote2").style.width = "100%";
+      }
+      function closeVote2() {
+        document.getElementById("myVote2").style.width = "0%";
+}
+
+      function openVote3() {
+        document.getElementById("myVote3").style.width = "100%";
+      }
+      function closeVote3() {
+        document.getElementById("myVote3").style.width = "0%";
+}
+
+      function openVote4() {
+        document.getElementById("myVote4").style.width = "100%";
+      }
+      function closeVote4() {
+        document.getElementById("myVote4").style.width = "0%";
+}
+
+      
+
+    </script>
   </body>
 </html>

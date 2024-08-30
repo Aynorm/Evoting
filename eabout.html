@@ -7,31 +7,151 @@
     <title>About</title>
   </head>
   <body>
-    <div>
-      <h1>Company Overview</h1>
-      <p>
-        Simply Voting Inc. is a full-service provider of secure, hosted online
-        elections. Our voting system was launched in 2003 and our first customer
-        was the Student's Society of McGill University. They continue to be one
-        of our many happy, repeat customers. Over 5000 organizations from
-        municipalities to universities to unions rely on Simply Voting for
-        safely executing their elections. We are an agile company and our voting
-        system is constantly evolving with technology and security innovations.
-        Many reputable third parties have audited our product, technical
-        infrastructure, and corporate infrastructure. These audits confirm that
-        Simply Voting possesses the integrity and security which we promise.
-        <br /><br />
-        <strong>Our Mission</strong> : To achieve excellence in providing
-        secure, trustworthy, and efficient e-democracy solutions for the
-        organizations we serve. <br /><br />
-        <strong>Our People</strong> : Dedicated staff who understand that
-        transparency and perfection are a must in this industry. <br /><br />
-        <strong>Our Strengths</strong> : Timely customer service, simplicity of
-        design, high security, and the ability to deliver custom solutions.
-      </p>
+    <div class="about-us-container">
+      <div class="about-us-div ab1-paragraph">
+        <img
+          style="max-width: 100%"
+          src="pictures/Rectangle_232_wufzub.jpg"
+          alt="about us"
+        />
+      </div>
+      <div class="about-us-div ab-paragraph">
+        <h1>ABOUT US</h1>
+        <p>
+          Elfrique is an innovative and complete goal-oriented company, which is
+          into event management services such as event ticketing, voting
+          contest, trivia system, event vendor, event form and travels & tours.
+          We work with individuals, companies, event organizers and merchants to
+          help them customize their touchpoints to achieve their needs and goals
+          with our exciting products and services. Through our website and short
+          codes, customers set-up their events, book flights, engage event
+          vendors and do a lot more. Our technology helps organizers and
+          merchants engage their audience most efficiently.
+        </p>
+      </div>
     </div>
 
-    <div><h1>MANAGEMENT TEAM</h1></div>
-    <div><h3>Taleeb Ayobami</h3></div>
+    <div style="margin-top: 30px">
+      <h1>Why Use Us</h1>
+      <div class="why-us-container">
+        <div class="why-us-div">
+          <h2>Excellent Support</h2>
+          <p>
+            You can view real-time report logs on all transactions i.e you can
+            monitor sales as they happen.
+          </p>
+        </div>
+
+        <div class="why-us-div">
+          <h2>Fast Pay-Out</h2>
+          <p>Pay-Out is within 1-7 days once an event is ended.</p>
+        </div>
+
+        <div class="why-us-div">
+          <h2>Multiple Payment Option</h2>
+          <p>
+            You have a wide range of payment options locally & internationally.
+            Payment is discrete with elfrique.
+          </p>
+        </div>
+
+        <div class="why-us-div">
+          <h2>Payment is 100% Safe</h2>
+          <p>
+            For any payment option you choose to complete a transaction, your
+            details are 100% secured & safe. Our system does not store user
+            payment details.
+          </p>
+        </div>
+
+        <div class="why-us-div">
+          <h2>Excellent Reporting</h2>
+          <p>
+            View real-time report logs on all transactions. Monitor sales as it
+            happens.
+          </p>
+        </div>
+
+        <div class="why-us-div">
+          <h2>Marketing Support</h2>
+          <p>
+            We support you with the free digital (or online) marketing to drive
+            & boost sales revenue.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      @media only screen and (max-width: 700px) {
+        .about-us-container {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .why-us-container {
+          display: flex;
+          flex-wrap: wrap;
+        }
+      }
+
+      body {
+        padding: 10px;
+        background-color: whitesmoke;
+        font-size: 1.2rem;
+        
+      }
+      div,
+      h1,
+      h2,
+      h3,
+      h4 {
+        margin: 0%;
+        padding: 0%;
+      }
+
+      p {
+        margin: 10px 0px 10px 0px;
+      }
+
+      .about-us-container {
+        display: flex;
+        flex-wrap: wra;
+        gap: 10px;
+        margin: 10px 0px 10px 0px;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      /* .about-us-div {
+        flex-grow: 1;
+        flex-basis: 200;
+        background-color: rebeccapurple;
+        padding: 10px;
+      } */
+      /* 
+      .ab1-paragraph {
+        background-color: bisque;
+      }
+
+      .ab-paragraph {
+        background-color: yellow;
+      } */
+
+      .why-us-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 10px 0px 10px 0px;
+        justify-content: space-between;
+      }
+
+      .why-us-div {
+        flex-grow: 1;
+        flex-basis: 200;
+        width: 500px;
+        padding: 10px 0px 10px 0px;
+      }
+    </style>
   </body>
 </html>

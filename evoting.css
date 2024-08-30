@@ -1,15 +1,21 @@
 @media only screen and (max-width: 700px) {
+  h1 {
+    font-size: medium;
+  }
+  p {
+    font-size: small;
+  }
   .sign-in-div {
-    margin-left: 100px;
+    margin-left: 50%;
   }
 
   .time-left {
-    font-size: 20px;
+    font-size: 10px;
     
   }
 
   .count-down {
-    font-size: 35px;
+    font-size: 35px !important;
     
   }
 
@@ -29,6 +35,7 @@ body {
     Helvetica,
     Arial,
     sans-serif;
+    font-size: 1.2rem;
 }
 
 h2 {
@@ -69,6 +76,7 @@ li {
   overflow: hidden;
   height: 45px;
   display: flex;
+
 
 }
 
@@ -226,12 +234,15 @@ li {
   max-width: 1000px;
   position: relative;
   margin: auto;
+  box-shadow: 5px 5px 5px hsl(0, 0%, 0%, 0.5);
+  border-radius:10px
 }
 
 .slide-img {
   max-height: 300px;
   width: 100%;
   background-color: transparent;
+  border-radius: 10px;
 }
 
 /* Next & previous buttons */
@@ -332,16 +343,17 @@ li {
   margin: 0%;
   padding: 0%;
   display: grid;
-  font-size: 80px;
+  /* font-size: 80px; */
 }
 
 .count-down {
   margin: 0px;
-    margin: 10px 0px 10px 0px;
+  font-size: 4em;
+  /* margin: 10px 0px 10px 0px; */
 }
 
 .time-left {
-  font-size: 25px;
+  font-size: 1.2rem;
   margin: 5px;
 }
 
@@ -377,10 +389,8 @@ li {
 
 .client-div {
   display: flex;
-  flex-wrap: wra;
+  flex-wrap: wrap;
   gap: 5px;
-  padding: 20px 0px 20px 0px;
-  background-color: hsl(0, 0%, 0%,0.2);
   
 }
 
@@ -390,7 +400,7 @@ li {
 }
 
 .alt-client {
-  max-width: 450px;
+  max-width: 450p;
   text-align: center;
 }
 
@@ -399,20 +409,11 @@ li {
   font-size: 20px;
   color: white;
   background-color: hsl(0, 0%, 50%,0.5);
-  margin-top: -2px;
+  margin-top: 2px;
 }
 
 .client-img {
   width: 100%;
-}
-
-.client-img:hover {
-    -ms-transform: scale(1);
-      /* IE 9 */
-      -webkit-transform: scale(1);
-      /* Safari 3-8 */
-      transform: scale(1.1);
-      border: 2px solid orange;
 }
 
 .call-div {
@@ -451,8 +452,16 @@ li {
   font-weight: 700;
 }
 
+.call-btn:hover {
+  background-color: white;
+}
+
 .call-color {
-  color: orange;
+  color: black;
+}
+
+.span-underline {
+border-bottom: 3px solid orange;
 }
 
 .yellow-line {
@@ -507,22 +516,20 @@ li {
   flex-wrap: wrap;
   column-gap: 10px;
   gap: 5px;
-  text-align: center;
-  align-items: center;
+  justify-content: center;
 }
 
 .ndp {
-  flex-grow: 1;
-  flex-basis: 200;
-  width: 100px;
-  padding: 10px 10px 10px 10px;
+  /* flex-grow: 1;
+  flex-basis: 200; */
+  padding: 10px;
   background-color: hsl(0, 0%, 0%,0.4);
   
 }
 
 .ndp-img {
   width: 80px;
-  height: 50px;
+  height: 80px;
 }
 
 .ndp:hover {

@@ -34,7 +34,7 @@
         </div>
       </div>
     </header>
-    <hr />
+    <!-- <hr /> -->
 
     <div
       style="
@@ -42,25 +42,23 @@
         grid-template-columns: 50px 1fr 100px;
         align-items: center;
         background-color: white;
+        box-shadow: 2px 2px 2px hsl(0, 0%, 0%, 0.5);
       "
     >
       <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <a href="#">Home</a>
-        <a href="https://aynorm.github.io/Evoting/edashboard"
-          >Internet Voting</a
-        >
-        <a href="#">Education</a>
+        <a href="https://aynorm.github.io/Evoting/edashboard">Voting</a>
         <a href="#">Events</a>
-        <a href="#">Clients</a>
         <a href="https://aynorm.github.io/Evoting/eservices">Services</a>
         <a href="#">Pricing</a>
         <a href="https://aynorm.github.io/Evoting/eabout">About</a>
         <a href="https://aynorm.github.io/Evoting/econtact">Contact</a>
+        <a href="https://aynorm.github.io/Evoting/eform">Register</a>
         <div>
           <a href="#"
             ><button
-              style="width: 100%"
+              style="width: 30%"
               class="log-in"
               onclick="document.getElementById('id01').style.display='block'"
               class="log-in"
@@ -78,10 +76,10 @@
         class="general-topbar"
         style="
           display: flex;
-          justify-content: space-between;
+          justify-content: center;
           align-items: center;
           padding: 5px 0px 5px 0px;
-          background-color: white;
+          /* background-color: rgb(27, 229, 236); */
         "
       >
         <div class="topnav">
@@ -91,18 +89,20 @@
               src="pictures/vicon-header-home.svg"
               alt="home"
           /></a>
-          <a href="https://aynorm.github.io/Evoting//edashboard"
-            >Internet Voting</a
-          >
-          <a href="#">Education</a>
+          <a href="https://aynorm.github.io/Evoting//edashboard">Voting</a>
           <a href="#">Events</a>
-          <a href="#">Clients</a>
           <a href="https://aynorm.github.io/Evoting/eservices">Services</a>
           <a href="#">Pricing</a>
           <a href="https://aynorm.github.io/Evoting/eabout">About</a>
           <a href="https://aynorm.github.io/Evoting/econtact">Contact</a>
         </div>
-        <div class="sign-in-div">
+
+        <div style="display: flex" class="sign-in-div">
+          <a href="#"
+            ><button class="log-in">
+              <a href="https://aynorm.github.io/Evoting/eform">Register</a>
+            </button></a
+          >
           <a href="#"
             ><button
               onclick="document.getElementById('id01').style.display='block'"
@@ -185,31 +185,32 @@
         <li>Contact</li>
       </ul>
     </div>-->
-    <hr />
+    <!-- <hr /> -->
+    <br />
 
     <section>
       <!--Slideshow-->
       <div class="slideshow-container">
         <div class="mySlides fade">
-          <div class="numbertext">1 / 3</div>
+          <!-- <div class="numbertext">1 / 3</div> -->
           <img class="slide-img" src="pictures/online-voting-slider.jpg" />
-          <div class="text">Caption Text</div>
+          <div class="text">Your vote matters</div>
         </div>
 
         <div class="mySlides fade">
-          <div class="numbertext">2 / 3</div>
+          <!-- <div class="numbertext">2 / 3</div> -->
           <img class="slide-img" src="pictures/education-voting-slider.jpg" />
-          <div class="text">Caption Two</div>
+          <div class="text">Educational</div>
         </div>
 
         <div class="mySlides fade">
-          <div class="numbertext">3 / 3</div>
+          <!-- <div class="numbertext">3 / 3</div> -->
           <img class="slide-img" src="pictures/other-voting-slider.jpg" />
-          <div class="text">Caption Three</div>
+          <div class="text">Co-operative</div>
         </div>
 
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
+        <!-- <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a> -->
       </div>
       <br />
 
@@ -218,18 +219,18 @@
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
       </div>
-      <hr />
+      <!-- <hr /> -->
       <!--Countdown-->
       <div class="count-down-div">
         <p class="time-left">Time Left Until Election Day</p>
-        <p class="count-down" id="count"></p>
+        <h1 class="count-down" id="count"></h1>
         <p class="time-left">January 10, 2030</p>
       </div>
       <hr />
       <br />
 
       <div style="text-align: center; margin-bottom: 20px">
-        <h2>WHY CHOOSE US?</h2>
+        <h1><span class="span-underline">WHY</span> CHOOSE US?</h1>
         <p>
           We take democracy seriously. Find out why our clients consistently
           rely on us for their election needs.
@@ -327,35 +328,45 @@
           </p>
         </div>
       </div>
-      <hr />
+      <!-- <hr /> -->
       <br />
 
-      <div class="client-div">
-        <div class="client alt-client">
-          <img
-            class="client-img"
-            src="pictures/political-party-elections.jpg"
-            alt="clients"
-          />
-          <p class="pbold">Education</p>
-        </div>
+      <div
+        style="
+          background-color: hsl(0, 0%, 0%, 0.2);
+          padding: 30px 0px 30px 0px;
+        "
+      >
+        <h1 class="why-our-client" style="text-align: center">
+          <span class="span-underline">OUR</span> SERVICES
+        </h1>
+        <div class="client-div">
+          <div class="client alt-client">
+            <img
+              class="client-img"
+              src="pictures/political-party-elections.jpg"
+              alt="clients"
+            />
+            <p class="pbold">Education</p>
+          </div>
 
-        <div class="client alt-client">
-          <img
-            class="client-img"
-            src="pictures/corporate-elections.jpg"
-            alt="clients"
-          />
-          <p class="pbold">Co-operative</p>
-        </div>
+          <div class="client alt-client">
+            <img
+              class="client-img"
+              src="pictures/corporate-elections.jpg"
+              alt="clients"
+            />
+            <p class="pbold">Co-operative</p>
+          </div>
 
-        <div class="client alt-client">
-          <img
-            class="client-img"
-            src="pictures/union-elections.jpg"
-            alt="clients"
-          />
-          <p class="pbold">Union</p>
+          <div class="client alt-client">
+            <img
+              class="client-img"
+              src="pictures/union-elections.jpg"
+              alt="clients"
+            />
+            <p class="pbold">Union</p>
+          </div>
         </div>
 
         <!-- 
@@ -383,23 +394,26 @@
           />
         </div>-->
       </div>
-      <hr />
+      <!-- <hr /> -->
+      <br />
 
       <div style="text-align: center; justify-content: center">
-        <h1 style="text-align: center">OUR CLIENTS</h1>
+        <h1 style="text-align: center">
+          <span class="span-underline">OUR</span> CLIENTS
+        </h1>
         <p>We have been transformin the election proccess since 2020</p>
       </div>
 
       <div class="ndp-container">
         <div class="ndp">
-          <img class="ndp-img" src="pictures/vndp-150x37.png" alt="ndp" />
-        </div>
-        <div class="ndp">
           <img
             class="ndp-img"
-            src="pictures/vcalifornia-teachers-association-84x75.png"
+            src="pictures/Kwara_State_Polytechnic_(logo).jpg"
             alt="ndp"
           />
+        </div>
+        <div class="ndp">
+          <img class="ndp-img" src="pictures/real estate logo.png" alt="ndp" />
         </div>
         <div class="ndp">
           <img
@@ -426,9 +440,12 @@
           />
         </div>
       </div>
-      <hr />
+      <!-- <hr /> -->
       <br />
 
+      <h1 style="text-align: center">
+        <span class="span-underline">Contact</span> Us
+      </h1>
       <div class="call-div">
         <div class="call">
           <img class="call-img" src="pictures/vicon-call.svg" alt="call" />
@@ -458,7 +475,7 @@
         </div>
       </div>
     </section>
-    <hr />
+    <!-- <hr /> -->
     <br />
 
     <footer>
@@ -522,6 +539,12 @@
             </li>
           </ul>
         </div>
+      </div>
+      <div style="text-align: center; margin-top: 10px">
+        <p>
+          © Copyright 2024 All rights reserved | This template is made by
+          <a style="color: gray; font-weight: 700" href="#">Aynorm</a>
+        </p>
       </div>
     </footer>
 
