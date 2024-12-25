@@ -3,104 +3,120 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="eservices.css" />
+    <link rel="stylesheet" href="evoting.css" />
     <title>About</title>
   </head>
   <body>
-    <div class="about-us-container">
-      <div class="about-us-div ab1-paragraph">
-        <img
-          style="max-width: 100%"
-          src="pictures/Rectangle_232_wufzub.jpg"
-          alt="about us"
-        />
-      </div>
-      <div class="about-us-div ab-paragraph">
+    <div id="topBar"></div>
+    <div class="side-maincontent">
+      <div id="leftBar"></div>
+      <div class="about-us-container">
         <h1>ABOUT US</h1>
-        <p>
-          Elfrique is an innovative and complete goal-oriented company, which is
-          into event management services such as event ticketing, voting
-          contest, trivia system, event vendor, event form and travels & tours.
-          We work with individuals, companies, event organizers and merchants to
-          help them customize their touchpoints to achieve their needs and goals
-          with our exciting products and services. Through our website and short
-          codes, customers set-up their events, book flights, engage event
-          vendors and do a lot more. Our technology helps organizers and
-          merchants engage their audience most efficiently.
-        </p>
+        <div style="display: flex" class="about-us-div ab-paragraph">
+          <img
+            class="about-us-img"
+            src="pictures/Rectangle_232_wufzub.jpg"
+            alt="about us"
+          />
+
+          <p class="us-p" style="margin-left: 10px">
+            Elfrique is an innovative and complete goal-oriented company, which
+            is into event management services such as event ticketing, voting
+            contest, trivia system, event vendor, event form and travels &
+            tours. We work with individuals, companies, event organizers and
+            merchants to help them customize their touchpoints to achieve their
+            needs and goals with our exciting products and services. Through our
+            website and short codes, customers set-up their events, book
+            flights, engage event vendors and do a lot more. Our technology
+            helps organizers and merchants engage their audience most
+            efficiently.
+          </p>
+        </div>
+
+        <h1>Why Use Us</h1>
+        <div class="why-us-container">
+          <div class="why-us-div">
+            <h2>Excellent Support</h2>
+            <p class="pcenter">
+              You can view real-time report logs on all transactions i.e you can
+              monitor sales as they happen.
+            </p>
+          </div>
+
+          <div class="why-us-div">
+            <h2>Fast Pay-Out</h2>
+            <p class="pcenter">
+              Pay-Out is within 1-7 days once an event is ended.
+            </p>
+          </div>
+
+          <div class="why-us-div">
+            <h2>Multiple Payment Option</h2>
+            <p class="pcenter">
+              You have a wide range of payment options locally &
+              internationally. Payment is discrete with elfrique.
+            </p>
+          </div>
+
+          <div class="why-us-div">
+            <h2>Payment is 100% Safe</h2>
+            <p class="pcenter">
+              For any payment option you choose to complete a transaction, your
+              details are 100% secured & safe. Our system does not store user
+              payment details.
+            </p>
+          </div>
+
+          <div class="why-us-div">
+            <h2>Excellent Reporting</h2>
+            <p class="pcenter">
+              View real-time report logs on all transactions. Monitor sales as
+              it happens.
+            </p>
+          </div>
+
+          <div class="why-us-div">
+            <h2>Marketing Support</h2>
+            <p class="pcenter">
+              We support you with the free digital (or online) marketing to
+              drive & boost sales revenue.
+            </p>
+          </div>
+        </div>
       </div>
+      <div id="navBottom"></div>
     </div>
-
-    <div style="margin-top: 30px">
-      <h1>Why Use Us</h1>
-      <div class="why-us-container">
-        <div class="why-us-div">
-          <h2>Excellent Support</h2>
-          <p>
-            You can view real-time report logs on all transactions i.e you can
-            monitor sales as they happen.
-          </p>
-        </div>
-
-        <div class="why-us-div">
-          <h2>Fast Pay-Out</h2>
-          <p>Pay-Out is within 1-7 days once an event is ended.</p>
-        </div>
-
-        <div class="why-us-div">
-          <h2>Multiple Payment Option</h2>
-          <p>
-            You have a wide range of payment options locally & internationally.
-            Payment is discrete with elfrique.
-          </p>
-        </div>
-
-        <div class="why-us-div">
-          <h2>Payment is 100% Safe</h2>
-          <p>
-            For any payment option you choose to complete a transaction, your
-            details are 100% secured & safe. Our system does not store user
-            payment details.
-          </p>
-        </div>
-
-        <div class="why-us-div">
-          <h2>Excellent Reporting</h2>
-          <p>
-            View real-time report logs on all transactions. Monitor sales as it
-            happens.
-          </p>
-        </div>
-
-        <div class="why-us-div">
-          <h2>Marketing Support</h2>
-          <p>
-            We support you with the free digital (or online) marketing to drive
-            & boost sales revenue.
-          </p>
-        </div>
-      </div>
-    </div>
+    <!-- <div id="navBottom"></div> -->
+    <script type="module" src="eform.js"></script>
 
     <style>
       @media only screen and (max-width: 700px) {
         .about-us-container {
           display: flex;
           flex-wrap: wrap;
+          margin-bottom: 90px !important;
         }
 
         .why-us-container {
           display: flex;
           flex-wrap: wrap;
         }
+
+        .us-p {
+          margin: 5px !important;
+          text-align: justify;
+        }
+
+        .about-us-img {
+          display: none !important;
+        }
       }
 
-      body {
-        padding: 10px;
-        background-color: whitesmoke;
-        font-size: 1.2rem;
-        
+      .about-us-img {
+        border-radius: 30px;
+        max-width: 300px;
       }
+
       div,
       h1,
       h2,
@@ -110,46 +126,34 @@
         padding: 0%;
       }
 
-      p {
+      .pcenter {
         margin: 10px 0px 10px 0px;
+        text-align: center;
       }
 
       .about-us-container {
-        display: flex;
-        flex-wrap: wra;
+        display: flex !important;
+        flex-wrap: wrap;
         gap: 10px;
         margin: 10px 0px 10px 0px;
         justify-content: space-evenly;
         align-items: center;
       }
 
-      /* .about-us-div {
-        flex-grow: 1;
-        flex-basis: 200;
-        background-color: rebeccapurple;
-        padding: 10px;
-      } */
-      /* 
-      .ab1-paragraph {
-        background-color: bisque;
-      }
-
-      .ab-paragraph {
-        background-color: yellow;
-      } */
-
       .why-us-container {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
-        margin: 10px 0px 10px 0px;
-        justify-content: space-between;
+        margin: 10px 2px 10px 2px;
+        justify-content: center;
       }
 
       .why-us-div {
+        background-color: hsl(39, 100%, 50%, 0.1);
+        border-radius: 20px;
         flex-grow: 1;
         flex-basis: 200;
-        width: 500px;
+        max-width: 500px;
         padding: 10px 0px 10px 0px;
       }
     </style>
