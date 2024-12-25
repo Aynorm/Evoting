@@ -8,8 +8,12 @@
       box-sizing: border-box;
     }
 
-  h1, h2 {
+  h1, h2, h3 {
     font-size: medium !important;
+  }
+
+  button {
+    font-size: 10px !important;
   }
   p {
     font-size: small !important;
@@ -115,6 +119,23 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.reg-sig {
+  display: flex;
+  column-gap: 5px;
+}
+
+.color-btn {
+  background-color: white !important;
+  color: orange !important;
+  border: 1px solid orange !important;
+}
+
+.color-btn:hover {
+  background-color: orangered !important;
+  color: white !important;
+  border: 1px solid white !important;
 }
 
 .a-no-pad {

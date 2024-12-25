@@ -1,13 +1,16 @@
 export const topBar = 
   "<div class='dsp-general'>\
-  <div class='div-dsp-logo'><img class='dsp-logo' src='real estate logo.png' alt='dsp-logo'><p class='p-logo'><a href='#'>E-Voting</a></p></div>\
-  <div class='div-dsp-btn'><a href='#'><button class='dsp-btn'>Sign in</button></a></div>\
+  <div class='div-dsp-logo'><img class='dsp-logo' src='real estate logo.png' alt='dsp-logo'><p class='p-logo'><a href='https://aynorm.github.io/Evoting/evoting.html#'>E-Voting</a></p></div>\
+  <div class='reg-sig'>\
+  <div class='div-dsp-btn '><a href='https://aynorm.github.io/Evoting/edashboard'><button class='dsp-btn color-btn'>Register</button></a></div>\
+  <div class='div-dsp-btn'><a href='#'><button class='dsp-btn'>Signin</button></a></div>\
+  </div>\
   </div>\
   "
 
 export const leftBar = 
   "<div class='js-general-nav'>\
-  <div class='div-dsp-logo stick'><img class='dsp-logo' src='pictures/real estate logo.png' alt='dsp-logo'><p class='p-logo'><a href='#'>E-Voting</a></p></div>\
+  <div class='div-dsp-logo stick'><img class='dsp-logo' src='pictures/real estate logo.png' alt='dsp-logo'><p class='p-logo'><a href='https://aynorm.github.io/Evoting/evoting.html#'>E-Voting</a></p></div>\
   <p class='small-pad'> MENU </p>\
    <div class='follow-us-div'>\
     <ul class='sm-ul'>\
