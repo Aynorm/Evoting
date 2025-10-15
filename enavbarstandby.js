@@ -1,4 +1,4 @@
-export const topBar = 
+export const topBar =
   "<div class='dsp-general'>\
   <div class='div-dsp-logo'><img class='dsp-logo' src='real estate logo.png' alt='dsp-logo'><p class='p-logo'><a href='https://aynorm.github.io/Evoting/evoting.html#'>E-Voting</a></p></div>\
   <div class='reg-sig'>\
@@ -6,9 +6,9 @@ export const topBar =
   <div class='div-dsp-btn'><a href='#'><button class='dsp-btn'>Signin</button></a></div>\
   </div>\
   </div>\
-  "
+  ";
 
-export const leftBar = 
+export const leftBar =
   "<div class='js-general-nav'>\
   <div class='div-dsp-logo stick'><img class='dsp-logo' src='pictures/real estate logo.png' alt='dsp-logo'><p class='p-logo'><a href='https://aynorm.github.io/Evoting/evoting.html#'>E-Voting</a></p></div>\
   <p class='small-pad'> MENU </p>\
@@ -31,44 +31,44 @@ export const leftBar =
   </ul >\
   </div>\
     </div>\
-    "
+    ";
 
-    //New Bottom Nav
+//New Bottom Nav
 
 export const navBottom =
   "<div class='general-navBottom' >\
   <ul class='ul-navBottom'>\
   <li class='li-navBottom'>\
   <a href='#'>\
-  <p>Events</p>\
+  <p class='mobile-p'>Events</p>\
   <img class='icon-navBottom' src = 'event calendar-icon.webp' alt = 'events'>\
   </a>\
   </li>\
   <li class='li-navBottom'>\
     <a href='https://aynorm.github.io/Evoting/eservices'>\
-  <p>Services</p>\
+  <p class='mobile-p'>Services</p>\
   <img class='icon-navBottom' src = 'services hand-shake-icon.webp' alt = 'services'>\
     </a>\
   </li>\
   <li class='li-navBottom'>\
     <a href='https://aynorm.github.io/Evoting//edashboard'>\
-  <p>Vote</p>\
+  <p class='mobile-p'>Vote</p>\
   <img class='icon-navBottom' src = 'ballot-box-voting-icon.webp' alt = 'voting'>\
     </a>\
   </li>\
   </li>\
   <li class='li-navBottom'>\
    <a href='#'>\
-  <p>Pricing</p>\
+  <p class='mobile-p'>Pricing</p>\
   <img class='icon-navBottom' src = 'pricing hand-money-income-dollar-icon.webp' alt = 'pricing'>\
     </a>\
   </li>\
   <li class='li-navBottom'>\
   <a href='https://aynorm.github.io/Evoting/eabout'>\
-  <p>About</p>\
+  <p class='mobile-p'>About</p>\
   <img class='icon-navBottom' src = 'about info-circle-line-icon.webp' alt = 'about'>\
     </a>\
   </li>\
   </ul >\
   </div >\
-"
+";
