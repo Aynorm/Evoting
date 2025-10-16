@@ -8,7 +8,22 @@
     <link rel="icon" type href="pictures/real estate logo.png" />
   </head>
   <body>
-    <div id="topBar"></div>
+    <script>
+      //wait 5 seconds, then show alert
+      setTimeout(() => {
+        alert(
+          "Welcome to VoteSmart! Your voice matters - and vote counts. Log in, explore the candidates, and make your choice with confidence. Secue. Simple. Transparent.  "
+        );
+      }, 5000);
+    </script>
+
+    <div style="background-color: #444444" id="topBar"></div>
+
+    <div class="count-down-div">
+      <p class="time-left">Time Left Until Election Day</p>
+      <h1 class="count-down" id="count"></h1>
+      <p class="time-left">January 10, 2030</p>
+    </div>
     <div
       class="side-maincontent"
       style="display: grid; grid-template-columns: 220px 1fr"
@@ -217,23 +232,23 @@
 
             <div class="mySlides fade">
               <!-- <div class="numbertext">3 / 3</div> -->
-              <img class="slide-img" src="pictures/other-voting-slider.jpg" />
+              <img class="slide-img" src="pictures/other-voting-slider.png" />
               <div class="text">...</div>
             </div>
 
             <!-- <a class="prev" onclick="plusSlides(-1)">❮</a>
         <a class="next" onclick="plusSlides(1)">❯</a> -->
             <!--Countdown-->
-            <div class="count-down-div">
+            <!-- <div class="count-down-div">
               <p class="time-left">Time Left Until Election Day</p>
               <h1 class="count-down" id="count"></h1>
               <p class="time-left">January 10, 2030</p>
-            </div>
+            </div> -->
             <br />
           </div>
           <br />
 
-          <div style="text-align: center">
+          <div style="text-align: center; display: none">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
@@ -248,7 +263,7 @@
           <hr />
           <br /> -->
 
-          <div style="text-align: center; margin-bottom: 20px">
+          <div class="why-choose-us">
             <h1><span class="span-underline">WHY</span> CHOOSE US?</h1>
             <p>
               We take democracy seriously. Find out why our clients consistently
