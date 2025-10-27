@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="evoting.css" />
 
-    <title>Document</title>
+    <title>Voting</title>
   </head>
   <body>
     <div id="topBar"></div>
+    <div id="leftBar"></div>
     <div class="side-maincontent">
-      <div id="leftBar"></div>
       <div class="admin-all-container">
-        <!-- <div><h1>Admistrator Dashboard</h1></div> -->
-
-        <style></style>
-
-        <div class="contest-banner-div">
+        <div
+          style="background-color: hsl(0, 0%, 100%, 0.04)"
+          class="contest-banner-div"
+        >
           <div
             style="
               display: flex;
@@ -290,21 +289,6 @@
     <script type="module" src="eform.js"></script>
 
     <style>
-      @media screen and (max-height: 800px) {
-        .soverlay a {
-          font-size: 20px;
-        }
-        .soverlay .sclosebtn {
-          font-size: 40px;
-          top: 15px;
-          right: 35px;
-        }
-
-        .admin-all-container {
-          margin-bottom: 110px;
-        }
-      }
-
       * {
         box-sizing: border-box;
       }
@@ -408,10 +392,6 @@
         background-color: gray;
       }
 
-      .admin-all-container {
-        padding-top: 30px;
-        width: 100%;
-      }
       .admin-short-container {
         width: 100%;
         display: flex;
@@ -510,16 +490,6 @@
         border: 1px solid white;
       }
 
-      .constestant-paragraph {
-        font-weight: 700;
-        font-size: 1.5em;
-        text-align: center;
-        padding: 0%;
-        margin-bottom: 5px;
-        background-color: hsl(39, 100%, 50%, 0.2);
-        border-radius: 40px;
-      }
-
       .result-1 {
         width: 200p;
         height: 40px;
@@ -546,7 +516,7 @@
       }
 
       .result-container {
-        background-color: #1a202c;
+        background-color: hsl(220, 26%, 14%);
       }
 
       /*Result Overlay hide*/
@@ -592,7 +562,7 @@
         font-size: 60px;
       }
 
-      @media screen and (max-height: 450px) {
+      /* @media screen and (max-height: 450px) {
         .overlay a {
           font-size: 20px;
         }
@@ -602,7 +572,7 @@
           top: 15px;
           right: 35px;
         }
-      }
+      } */
     </style>
 
     <script>
