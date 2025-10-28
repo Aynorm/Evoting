@@ -1,3 +1,10 @@
+//wait 5 seconds, then show alert
+setTimeout(() => {
+  alert(
+    "Welcome to VoteSmart! Your voice matters - and vote counts. Log in, explore the candidates, and make your choice with confidence. Secure. Simple. Transparent.  "
+  );
+}, 5000000);
+
 //Header side js
 function openNav() {
   document.getElementById("mySidebar").style.width = "100%";
@@ -6,7 +13,7 @@ function openNav() {
 
 function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
+  document.getElementById("main").style.marginLeft = "0";
 }
 //Nav js
 
@@ -19,15 +26,17 @@ function showSlides() {
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+    slides[i].style.display = "none";
   }
   slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
   setTimeout(showSlides, 3000); // Change image every 3 seconds
 }
 // Set the date we're counting down to
@@ -60,13 +69,12 @@ var x = setInterval(function () {
 
 // options for bars
 
-import { topBar, leftBar, navBottom} from './enavbarstandby.js';
+import { topBar, leftBar, navBottom } from "./enavbarstandby.js";
 
 //console.log(PI);
 document.getElementById("topBar").innerHTML = topBar;
 document.getElementById("leftBar").innerHTML = leftBar;
 document.getElementById("navBottom").innerHTML = navBottom;
-
 
 //side bar
 
@@ -92,7 +100,7 @@ document.getElementById("topNav").innerHTML = html;*/
 //   "
 
 // document.getElementById("navTop").innerHTML = navTop;
-  
+
 // const html =
 //   "<div class='js-general-nav'>\
 //   <div class='div-dsp-logo stick'><img class='dsp-logo' src='pictures/real estate logo.png' alt='dsp-logo'><p class='p-logo'><a href='#'>E-Voting</a></p></div>\
@@ -119,7 +127,7 @@ document.getElementById("topNav").innerHTML = html;*/
 //     "
 
 // document.getElementById("nav").innerHTML = html;
-    
+
 // //New Bottom Nav
 
 // const navBottom =
@@ -159,5 +167,5 @@ document.getElementById("topNav").innerHTML = html;*/
 //   </ul >\
 //   </div >\
 // "
-      
+
 // document.getElementById("navBottom").innerHTML = navBottom;
