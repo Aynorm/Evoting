@@ -25,6 +25,10 @@
     display: block !important;
   }
 
+  .general-welcome {
+    display: none !important;
+  }
+
   .slideshow-container {
     margin-top: -20px !important;
     margin-bottom: -40px !important;
@@ -96,6 +100,11 @@
     grid-template-columns: 0px 1fr !important;
     margin-left: -10px !important;
     padding: 0px !important;
+  }
+
+  .admin-all-container {
+    padding: 10px !important;
+    margin-bottom: 80px !important;
   }
 }
 
@@ -236,6 +245,62 @@ li {
   text-align: left;
 }
 
+.general-welcome {
+  /* background-color: red; */
+  height: 80px;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sub-welcome {
+  display: flex;
+  align-items: center;
+  /* background-color: green; */
+  text-align: center;
+  justify-content: space-between;
+}
+
+.div-desktopbtn-reg-contact {
+  /* background-color: greenyellow; */
+  display: flex;
+  padding: 10px;
+  border-radius: 12px;
+  gap: 10px;
+}
+
+.desktopbtn-reg-contact {
+  padding: 10px 15px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: hsl(0, 0%, 100%, 0.5);
+  color: white;
+}
+
+.desktopbtn-reg-contact:hover {
+  background-color: white;
+  color: black;
+}
+
+.div-light-dark-hello {
+  display: flex;
+  align-items: center;
+  /* background-color: orange; */
+  justify-content: space-around;
+}
+
+.user-span {
+  width: 20px;
+  height: 20px;
+  background-color: greenyellow;
+  border-radius: 50%;
+  padding: 15px;
+}
+
 /* side bar */
 .sidebar {
   height: 100%;
@@ -331,10 +396,10 @@ li {
   background-color: transparent;
 }
 
-/* .side-maincontent {
+.side-maincontent {
   display: grid;
   grid-template-columns: 220px 1fr;
-} */
+}
 
 .main-page {
   margin-left: 10px !important;
@@ -357,7 +422,7 @@ li {
 
 .slide-img {
   max-height: 10%;
-  width: 50%;
+  width: 100%;
   background-color: transparent;
   border-radius: 10px;
 }
@@ -841,6 +906,7 @@ span.psw {
 
 .js-general-nav {
   background-color: hsl(240, 8%, 16%, 0.5);
+  backdrop-filter: blur(100px);
   align-items: center;
   width: 220px;
   padding-top: 10px;
