@@ -95,6 +95,12 @@
   color: white;
 }
 
+.sSpace {
+  min-height: 50px;
+  display: grid;
+  grid-template-columns: space-between;
+}
+
 .contestant-container {
   display: flex;
   flex-wrap: wrap;
