@@ -12,9 +12,16 @@
     <div id="leftBar"></div>
     <div class="side-maincontent">
       <div class="" id="leftBar"></div>
-      <div class="admin-all-container">
+      <div class="admin-all-container main-page">
+        <div class="" id="desktopNav"></div>
         <div
-          style="background-color: hsl(0, 0%, 100%, 0.04)"
+          style="
+            background-color: hsl(0, 0%, 100%, 0.1);
+            backdrop-filter: blur(100px);
+            border-radius: 14px;
+            padding: 10px;
+            margin-top: 10px;
+          "
           class="contest-banner-div"
         >
           <div
@@ -280,7 +287,11 @@
             </div>
           </div>
         </div>
-        <button class="dsp-btn" style="cursor: pointer" onclick="openNav()">
+        <button
+          class="desktopbtn-reg-contact"
+          style="cursor: pointer"
+          onclick="openNav()"
+        >
           Results
         </button>
       </div>
@@ -324,10 +335,10 @@
         z-index: 1;
         top: 0;
         left: 0;
-        background-color: #1a202c;
+        background-color: hsl(220, 26%, 14%, 0.4);
         overflow-x: hidden;
         transition: 0.5s;
-        backdrop-filter: blur(5px);
+        backdrop-filter: blur(100px);
       }
 
       .soverlay-content {
@@ -452,8 +463,8 @@
         background-color: white;
         color: black;
         border: none;
-        font-size: 20px;
-        border-radius: 5px;
+        font-size: 1rem;
+        border-radius: 14px;
         width: 50%;
         height: 30px;
         font-weight: 700;
@@ -511,7 +522,8 @@
       }
 
       .result-container {
-        background-color: hsl(220, 26%, 14%);
+        background-color: hsl(220, 26%, 14%, 0.4);
+        backdrop-filter: blur(100px);
       }
 
       /*Result Overlay hide*/
@@ -554,7 +566,7 @@
         position: absolute;
         top: 20px;
         right: 45px;
-        font-size: 60px;
+        font-size: 30px;
       }
 
       /* @media screen and (max-height: 450px) {

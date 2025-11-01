@@ -1,13 +1,28 @@
+//Top Nav Desktop
+export const desktopNav =
+  "<div class='general-welcome'>\
+<div class='sub-welcome'><h1>Welcome</h1>\
+<div class='div-desktopbtn-reg-contact'>\
+<a href='https://aynorm.github.io/Evoting/eform'><button class='desktopbtn-reg-contact'>Register</button></a>\
+<a href='https://aynorm.github.io/Evoting/econtact'><button class='desktopbtn-reg-contact'>Contact</button></a></div></div>\
+<div class='div-light-dark-hello'>\
+<div class='div-background-switch' style='display: flex'><input class='switch-input' type='checkbox'><p>dark/light</p></div>\
+<div class='div-hello-user'><h3>Hello, <span class='user-span'><img class='img-user' src='pictures/user.png' alt='user'></span></h3></div>\
+</div>\
+</div>";
+
+//Nav Top Mobile
 export const topBar =
   "<div class='dsp-general'>\
   <div class='div-dsp-logo'><img class='dsp-logo' src='real estate logo.png' alt='dsp-logo'><p class='p-logo'><a href='https://aynorm.github.io/Evoting/evoting.html#'>E-Voting</a></p></div>\
-  <div class='reg-sig'>\
-  <div class='div-dsp-btn '><a href='https://aynorm.github.io/Evoting/eform'><button class='dsp-btn color-btn'>Register</button></a></div>\
-  <div class='div-dsp-btn'><a href='#'><button class='dsp-btn'>Signin</button></a></div>\
+  <div class='div-desktopbtn-reg-contact'>\
+  <div class=''><a href='https://aynorm.github.io/Evoting/eform'><button class='desktopbtn-reg-contact'>Register</button></a></div>\
+  <div class=''><a href='https://aynorm.github.io/Evoting/econtact'><button class='desktopbtn-reg-contact'>Contact</button></a></div>\
   </div>\
   </div>\
   ";
 
+//Left Nav
 export const leftBar =
   "<div class='js-general-nav'>\
   <div class='div-dsp-logo stick'><img class='dsp-logo' src='pictures/real estate logo.png' alt='dsp-logo'><p class='p-logo'><a href='https://aynorm.github.io/Evoting/evoting.html#'>E-Voting</a></p></div>\
