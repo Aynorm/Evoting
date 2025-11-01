@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="evoting.css" />
   </head>
   <body>
+    <style>
+      input {
+        background-color: hsl(0, 0%, 100%, 0.2);
+        backdrop-filter: blur(100px);
+      }
+    </style>
     <div id="topBar"></div>
     <div class="side-maincontent">
       <div id="leftBar"></div>
@@ -16,14 +22,19 @@
           <form action="">
             <label class="contact-label" for="">Your Organization</label>
             <input type="text" /><br />
+
             <label class="contact-label" for="">Your Name (required)</label>
             <input type="text" /><br />
+
             <label class="contact-label" for="">Your Telephone</label>
-            <input type="text" /><br />
+            <input type="number" /><br />
+
             <label class="contact-label" for="">Your Email (required)</label>
-            <input type="text" /><br />
+            <input type="email" /><br />
+
             <label class="contact-label" for="">Subject (required)</label>
             <input type="text" /><br />
+
             <label class="contact-label" for="">Your Message (required)</label
             ><br />
             <textarea class="your-message" name="" id=""></textarea><br />
