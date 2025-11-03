@@ -29,7 +29,7 @@ export const leftBar =
   <p class='small-pad'> MENU </p>\
    <div class='follow-us-div'>\
     <ul class='sm-ul'>\
-  <li class='li-hover'> <img class='social-media-icon' src='ballot-box-voting-icon.webp' alt='voting'> <a href='https://aynorm.github.io/Evoting//edashboard'> Voting </a></li>\
+  <li class='li-hover'> <img class='social-media-icon' src='ballot-box-voting-icon.png' alt='voting'> <a href='https://aynorm.github.io/Evoting//edashboard'> Voting </a></li>\
   <li class='li-hover'> <img class='social-media-icon' src='event calendar-icon.webp' alt='events'> <a href='#'> Events </a></li>\
   <li class='li-hover'> <img class='social-media-icon' src='services hand-shake-icon.webp' alt='services'> <a href='https://aynorm.github.io/Evoting/eservices'> Services </a></li>\
   <li class='li-hover'> <img class='social-media-icon' src='pricing hand-money-income-dollar-icon.webp' alt='pricing'> <a href='#'> Pricing </a></li>\
@@ -68,7 +68,7 @@ export const navBottom =
   <li class='li-navBottom'>\
     <a href='https://aynorm.github.io/Evoting//edashboard'>\
   <p class='mobile-p'>Vote</p>\
-  <img class='icon-navBottom' src = 'ballot-box-voting-icon.webp' alt = 'voting'>\
+  <img class='icon-navBottom' src = 'ballot-box-voting-icon.png' alt = 'voting'>\
     </a>\
   </li>\
   </li>\

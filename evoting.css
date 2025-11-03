@@ -716,7 +716,6 @@ li {
 
 .social-media-icon {
   width: 30px;
-  background-color: white;
 }
 
 .ndp-container {
@@ -1084,7 +1083,6 @@ a {
 .icon-navBottom {
   max-width: 40px;
   padding: 3px;
-  background-color: hsl(0, 0%, 100%, 0.6);
   border-radius: 10px;
 }
 
