@@ -17,11 +17,6 @@
         backdrop-filter: blur(100px);
       }
 
-      .fsocial-media-icon {
-        width: 50px;
-        padding-left: 10px;
-      }
-
       .discription-btn {
         border: none;
         border-radius: 10px;
@@ -44,6 +39,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 5px;
+        margin: 15px 0px 15px 0px;
       }
       .winner-div {
         flex-grow: 1;
@@ -57,19 +53,20 @@
       }
 
       .winner-div:hover {
-        background-color: hsl(0, 0%, 0%, 0.7);
+        background-color: hsl(0, 0%, 0%, 0.4);
+        backdrop-filter: blur(100px);
       }
       .winner {
-        background-color: hsl(120, 100%, 25%, 0.7);
+        background-color: hsl(120, 100%, 25%, 0.4);
       }
       .runner1 {
-        background-color: hsl(80, 61%, 50%, 0.7);
+        background-color: hsl(80, 61%, 50%, 0.4);
       }
       .runner2 {
-        background-color: hsl(0, 100%, 50%, 0.7);
+        background-color: hsl(0, 100%, 50%, 0.4);
       }
       .runner3 {
-        background-color: hsl(180, 100%, 25%, 0.7);
+        background-color: hsl(180, 100%, 25%, 0.4);
       }
     </style>
   </head>
@@ -110,62 +107,59 @@
             />
           </div>
 
-          <div>
+          <div style="text-align: center; align-items: center">
             <h1>
-              FACE OF SOCIAL MEDIA 2020 <br /><span
+              FACE OF SOCIAL MEDIA 2030 <br /><span
                 >(online voting Contest)</span
               >
             </h1>
             <p>Organised by : Aynorms Media</p>
-            <h2>DATE: <span>Sat April 18 2020</span></h2>
+            <h2>DATE: <span>Sat April 18 2030</span></h2>
             <h2>TIME:<span>06:06</span></h2>
-            <p>Share Contest</p>
 
-            <ul class="media" style="display: flex; margin-left: -50px">
-              <li>
-                <img
-                  class="fsocial-media-icon"
-                  src="pictures/7.facebook.png"
-                  alt="fb"
-                />
-              </li>
-              <li>
-                <img
-                  class="fsocial-media-icon"
-                  src="pictures/7.facebook.png"
-                  alt="twitter"
-                />
-              </li>
-              <li>
-                <img
-                  class="fsocial-media-icon"
-                  src="pictures/7.facebook.png"
-                  alt="telegram"
-                />
-              </li>
-              <li>
-                <img
-                  class="fsocial-media-icon"
-                  src="pictures/10.whatsapp.png"
-                  alt="whatsapp"
-                />
-              </li>
-              <li>
-                <img
-                  class="fsocial-media-icon"
-                  src="pictures/7.facebook.png"
-                  alt="email"
-                />
-              </li>
-            </ul>
-            <div
-              style="
-                display: flex;
-                flex-wrap: wrap;
-                gap: 5px;
-                text-align: center;
-              "
-            >
+            <div style="text-align: center">
+              <p>Share Contest</p>
+
+              <ul class="media" style="display: flex">
+                <li>
+                  <img
+                    class="social-media-icon"
+                    src="pictures/7.facebook.png"
+                    alt="fb"
+                  />
+                </li>
+                <li>
+                  <img
+                    class="social-media-icon"
+                    src="pictures/7.facebook.png"
+                    alt="twitter"
+                  />
+                </li>
+                <li>
+                  <img
+                    class="social-media-icon"
+                    src="pictures/7.facebook.png"
+                    alt="telegram"
+                  />
+                </li>
+                <li>
+                  <img
+                    class="social-media-icon"
+                    src="pictures/10.whatsapp.png"
+                    alt="whatsapp"
+                  />
+                </li>
+                <li>
+                  <img
+                    class="social-media-icon"
+                    src="pictures/7.facebook.png"
+                    alt="email"
+                  />
+                </li>
+              </ul>
+            </div>
+
+            <div style="gap: 5px; text-align: center">
               <button class="discription-btn">Form description</button>
               <button class="discription-btn">Organizer details</button>
             </div>
@@ -254,7 +248,7 @@
               ><br />
               <input type="email" name="email" placeholder="Email Address" />
 
-              <h1>FACE OF SOCIAL MEDIA 2020</h1>
+              <h1>FACE OF SOCIAL MEDIA 2030</h1>
               <h2>How to Register</h2>
 
               <input type="text" placeholder="Full Name" /><br />
@@ -342,7 +336,8 @@
       .form-container {
         width: 100%;
         padding: 20px 10px 20px 10px;
-        border: 1px solid black;
+        border: 1px solid white;
+        border-radius: 14px;
       }
     </style>
 
