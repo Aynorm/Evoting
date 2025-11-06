@@ -35,7 +35,7 @@
   }
 
   .slide-img {
-    width: 100% !important;
+    width: 90% !important;
     max-height: 300px !important;
   }
   .sign-in-div {
@@ -87,7 +87,8 @@
     width: 100%;
     bottom: 10px;
     border: 1px solid white;
-    background-color: #0e1730;
+    background-color: hsl(224, 55%, 12%, 0.5);
+    backdrop-filter: blur(10px);
     margin-bottom: -10px;
   }
 
@@ -416,7 +417,7 @@ li {
 
 .main-page {
   margin-left: 10px !important;
-  background-color: hsl(240, 8%, 16%, 0.5);
+  /* background-color: hsl(240, 8%, 16%, 0.5); */
 }
 
 /* Slideshow container */
@@ -720,10 +721,10 @@ li {
 
 .ndp-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   column-gap: 10px;
   gap: 5px;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .ndp {
@@ -1050,11 +1051,12 @@ a {
 /* New Bottom nav*/
 
 .general-navBottom {
-  background-color: hsl(39, 100%, 50%, 0.03);
+  /* background-color: hsl(39, 100%, 50%, 0.03);
+  backdrop-filter: blur(100px) !important;
   border-radius: 30px 30px 0px 0px;
   border: 1px solid black;
   padding: 5px;
-  margin: 0%;
+  margin: 0%; */
   display: none;
 }
 
