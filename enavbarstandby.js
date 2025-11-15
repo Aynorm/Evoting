@@ -87,3 +87,5 @@ export const navBottom =
   </ul >\
   </div >\
 ";
+
+//Theme switch
