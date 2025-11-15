@@ -129,6 +129,7 @@
   box-sizing: border-box;
 }
 body {
+  background-image: url(https://images.unsplash.com/photo-1653511442060-00c7b10827c4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) !important;
   background: radial-gradient(circle at top left, #0e1730, #060913);
   /* background-color: #26262d; */
   color: white !important;
@@ -545,7 +546,7 @@ li {
   border-radius: 14px;
   border: 1px solid white;
   background-color: hsl(0, 0%, 100%, 0.1);
-  backdrop-filter: blur(100px);
+  backdrop-filter: blur(10px);
 }
 
 .count-down {
@@ -577,10 +578,11 @@ li {
 }
 
 .alt-business {
-  background-color: hsl(0, 0%, 0%, 0.1);
+  background-color: hsl(0, 0%, 100%, 0.1);
   width: 300px;
   padding: 20px 10px 20px 10px;
-  border-radius: 12px;
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
 }
 
 .business:hover {
@@ -632,7 +634,7 @@ li {
   background-color: hsl(0, 0%, 100%, 0.1);
   border-radius: 14px;
   border: 1px solid white;
-  backdrop-filter: blur(100px);
+  backdrop-filter: blur(10px);
 }
 
 .call {
@@ -929,7 +931,7 @@ span.psw {
 
 .js-general-nav {
   background-color: hsl(240, 8%, 16%, 0.5);
-  backdrop-filter: blur(100px);
+  backdrop-filter: blur(10px);
   border: 1px solid white;
   border-radius: 14px;
   align-items: center;
@@ -1121,3 +1123,7 @@ p {
 }
 
 /* About */
+
+.light-mode {
+  color: black;
+}

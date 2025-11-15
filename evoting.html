@@ -8,6 +8,19 @@
     <link rel="icon" type href="pictures/real estate logo.png" />
   </head>
   <body>
+    <style>
+      .light-mode {
+        color: black !important;
+        background-image: url(pictures/pawel-czerwinski-_hcYZYk9Abo-unsplashlight.png) !important;
+      }
+    </style>
+    <!-- <button onclick="myTheme()">switch</button> -->
+    <script>
+      function myTheme() {
+        var element = document.body;
+        element.classList.toggle("light-mode");
+      }
+    </script>
     <div id="topBar"></div>
     <!-- <div class="count-down-div">
       <p class="time-left">Time Left Until Election Day</p>
@@ -365,7 +378,7 @@
               padding: 30px 0px 30px 0px;
               border-radius: 14px;
               border: 1px solid white;
-              backdrop-filter: blur(100px);
+              backdrop-filter: blur(10px);
             "
           >
             <!-- <h1 class="why-our-client" style="text-align: center">

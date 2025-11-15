@@ -3,7 +3,7 @@ setTimeout(() => {
   alert(
     "Welcome to VoteSmart! Your voice matters - and vote counts. Log in, explore the candidates, and make your choice with confidence. Secure. Simple. Transparent.  "
   );
-}, 5000000);
+}, 500000);
 
 //Header side js
 function openNav() {
