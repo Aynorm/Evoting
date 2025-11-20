@@ -268,7 +268,7 @@ li {
   grid-template-columns: 1fr 1fr;
   align-items: center !important;
   padding: 0px 10px 0px 10px;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid gray;
   border-radius: 14px;
   backdrop-filter: blur(10px);
   justify-content: space-between;
@@ -547,7 +547,7 @@ li {
   font-size: 0.8rem;
   max-width: 100%;
   border-radius: 14px;
-  border: 1px solid white;
+  border: 1px solid gray;
   background-color: hsl(0, 0%, 100%, 0.1);
   backdrop-filter: blur(10px);
 }
@@ -586,6 +586,7 @@ li {
   padding: 20px 10px 20px 10px;
   border-radius: 14px;
   backdrop-filter: blur(10px);
+  border: 1px solid gray;
 }
 
 .business:hover {
@@ -636,7 +637,7 @@ li {
   padding: 50px 5px 50px 5px;
   background-color: hsl(0, 0%, 100%, 0.1);
   border-radius: 14px;
-  border: 1px solid white;
+  border: 1px solid gray;
   backdrop-filter: blur(10px);
 }
 
@@ -645,12 +646,12 @@ li {
   flex-basis: 200;
   background-color: hsl(0, 7%, 46%, 0.2);
   padding: 30px 0px 30px 0px;
-  border: 5px solid whitesmoke;
+  border: 1px solid gray;
   border-radius: 12px;
 }
 
 .call:hover {
-  border: 5px solid orange;
+  border: 1px solid orange;
 }
 
 .color {
@@ -935,7 +936,7 @@ span.psw {
 .js-general-nav {
   background-color: hsl(240, 8%, 16%, 0.5);
   backdrop-filter: blur(10px);
-  border: 1px solid white;
+  border: 1px solid gray;
   border-radius: 14px;
   align-items: center;
   width: 220px;
