@@ -249,6 +249,9 @@ li {
   .topnav {
     display: none;
   }
+  .moverlay {
+    width: 100% !important;
+  }
 }
 
 .topnav .responsive a {
@@ -258,7 +261,7 @@ li {
 }
 
 .general-welcome {
-  background-color: hsl(0, 0%, 100%, 0.1);
+  background-color: hsl(0, 0%, 0%, 0.9);
   height: 80px;
   max-width: 100%;
   display: grid;
@@ -267,7 +270,7 @@ li {
   padding: 0px 10px 0px 10px;
   border-bottom: 2px solid white;
   border-radius: 14px;
-  backdrop-filter: blur(100px);
+  backdrop-filter: blur(10px);
   justify-content: space-between;
 }
 
