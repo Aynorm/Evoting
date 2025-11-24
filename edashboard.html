@@ -90,7 +90,8 @@
               position: fixed;
               top: 0;
               left: 0;
-              width: 30%;
+              width: 100%;
+              max-width: 400px;
               height: 100%;
               background: hsl(224, 55%, 12%, 0.7);
               /* Dark semi-transparent background */
@@ -122,7 +123,7 @@
           <div id="moverlay" class="moverlay">
             <button
               style="
-                font-size: 3rem;
+                font-size: 30px;
                 margin-left: 85%;
                 padding: 10px 20px;
                 border: none;
@@ -199,7 +200,13 @@
                     required
                   />
 
-                  <button class="paymentBtn" type="submit">Pay Now</button>
+                  <button
+                    class="paymentBtn"
+                    type="submit"
+                    onclick="vote('Option 1')"
+                  >
+                    Pay Now
+                  </button>
                 </form>
 
                 <p id="status"></p>
@@ -321,13 +328,20 @@
                 <!-- <button class="make-payment-btn" onclick="vote('Option 1')">
                   Make Payment
                 </button> -->
-                <button class="make-payment-btn" onclick="showOverlayBtn()">
-                  Make Payment
+                <button class="make-payment-btn" onclick="openPayment()">
+                  Proceed to Payment
                 </button>
                 <div class=""></div>
               </div>
             </div>
             <span class="sconst-btn" onclick="openVote()"> Vote</span>
+
+            <script>
+              function openPayment() {
+                document.getElementById("myVote1").style.display = "none";
+                document.getElementById("moverlay").style.display = "grid";
+              }
+            </script>
           </div>
 
           <div class="contestant-div">
@@ -359,7 +373,7 @@
 
                 <h3>Subtotal: $1.05 (include. VAT)</h3>
                 <button class="make-payment-btn" onclick="vote('Option 2')">
-                  Make Payment
+                  Proceed to Payment
                 </button>
               </div>
             </div>
@@ -397,7 +411,7 @@
 
                 <h3>Subtotal: $1.05 (include. VAT)</h3>
                 <button class="make-payment-btn" onclick="vote('Option 3')">
-                  Make Payment
+                  Proceed to Payment
                 </button>
               </div>
             </div>
@@ -434,7 +448,7 @@
 
                 <h3>Subtotal: $1.05 (include. VAT)</h3>
                 <button class="make-payment-btn" onclick="vote('Option 4')">
-                  Make Payment
+                  Proceed to Payment
                 </button>
               </div>
             </div>
@@ -471,7 +485,7 @@
 
                 <h3>Subtotal: $1.05 (include. VAT)</h3>
                 <button class="make-payment-btn" onclick="vote('Option 5')">
-                  Make Payment
+                  Proceed to Payment
                 </button>
               </div>
             </div>
