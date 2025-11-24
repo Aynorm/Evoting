@@ -92,24 +92,27 @@
               left: 0;
               width: 100%;
               max-width: 400px;
-              height: 100%;
-              background: hsl(224, 55%, 12%, 0.7);
+              height: auto;
+              padding-bottom: 300px;
+              background: hsl(224, 55%, 12%, 0.9);
               /* Dark semi-transparent background */
               display: none; /* Hidden by default */
               justify-content: center;
               align-items: center;
               z-index: 999;
-              backdrop-filter: blur(5px); /* Adds a blur effect to background */
+              backdrop-filter: blur(
+                10px
+              ); /* Adds a blur effect to background */
               transition: opacity 0.3s ease;
             }
 
             /* Popup content inside overlay */
             .moverlay-content {
+              margin-top: 0px !important;
               background: transparent;
               color: white;
-              padding: 30px;
+              padding: 0px 10px 0px 10px;
               border-radius: 12px;
-              text-align: center;
               width: 100%;
               box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             }
@@ -122,10 +125,10 @@
           <!-- Overlay container -->
           <div id="moverlay" class="moverlay">
             <button
+              class="sclosebtn"
               style="
                 font-size: 30px;
                 margin-left: 85%;
-                padding: 10px 20px;
                 border: none;
                 background-color: transparent;
                 color: white;
