@@ -11,14 +11,14 @@
   h2,
   h3,
   p {
-    font-size: small !important;
+    font-size: medium !important;
   }
 
   button {
     font-size: 10px !important;
   }
   p {
-    font-size: small !important;
+    font-size: medium !important;
   }
 
   #topBar {
@@ -32,12 +32,23 @@
   .slideshow-container {
     margin-top: -10px !important;
     margin-bottom: -40px !important;
+    display: block !important;
   }
 
   .slide-img {
-    width: 90% !important;
+    width: 100% !important;
     max-height: 300px !important;
   }
+
+  .desktop-slid-div {
+    display: none !important;
+  }
+
+  .against-mobile {
+    margin-top: 30px !important;
+    margin-bottom: -50px !important;
+  }
+
   .sign-in-div {
     margin-left: 50%;
   }
@@ -129,7 +140,7 @@
   box-sizing: border-box;
 }
 body {
-  background-image: url(https://images.unsplash.com/photo-1653511442060-00c7b10827c4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) !important;
+  /* background-image: url(https://images.unsplash.com/photo-1653511442060-00c7b10827c4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) !important; */
   background: radial-gradient(circle at top left, #0e1730, #060913);
   /* background-color: #26262d; */
   color: white !important;
@@ -261,7 +272,7 @@ li {
 }
 
 .general-welcome {
-  background-color: hsl(0, 0%, 0%, 0.9);
+  background-color: hsl(240, 8%, 16%, 0.5);
   height: 80px;
   max-width: 100%;
   display: grid;
@@ -430,6 +441,7 @@ li {
 }
 
 .slideshow-container {
+  display: none;
   max-width: 100%;
   position: relative;
   margin-bottom: -20px;
@@ -443,6 +455,26 @@ li {
   width: 100%;
   background-color: transparent;
   border-radius: 10px;
+}
+
+.desktop-slid-div {
+  /* background-image: url(pictures/bac.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 50%; */
+  background-color: hsl(0, 0%, 100%, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid hsl(0, 0%, 50%, 0.5);
+  padding: 10px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.desktop-slide-img {
+  width: 30%;
+  border-radius: 14px;
 }
 
 /* Next & previous buttons */
@@ -554,7 +586,10 @@ li {
 
 .count-down {
   margin: 0px;
+  font-weight: 100 !important;
   font-size: 4em;
+  text-align: center;
+  align-items: center;
   /* margin: 10px 0px 10px 0px; */
 }
 
@@ -564,8 +599,7 @@ li {
   margin-top: -50px;
 }
 .time-left {
-  font-size: 1.2rem;
-  margin: 5px;
+  margin: 15px 5px 5px 5px;
 }
 
 .business-container {
@@ -634,11 +668,11 @@ li {
   display: flex;
   gap: 10px;
   text-align: center;
-  padding: 50px 5px 50px 5px;
-  background-color: hsl(0, 0%, 100%, 0.1);
-  border-radius: 14px;
-  border: 1px solid gray;
-  backdrop-filter: blur(10px);
+  padding: 30px 5px 30px 5px;
+  /* background-color: hsl(0, 0%, 100%, 0.1); */
+  /* border-radius: 14px; */
+  /* border: 1px solid gray; */
+  /* backdrop-filter: blur(10px); */
 }
 
 .call {
@@ -1130,5 +1164,11 @@ p {
 /* theme switch*/
 .light-mode {
   color: black !important;
-  background-image: url(pictures/pawel-czerwinski-_hcYZYk9Abo-unsplashlight.png) !important;
+  background: whitesmoke !important;
+  /* background-image: url(pictures/pawel-czerwinski-_hcYZYk9Abo-unsplashlight.png) !important; */
+}
+
+.lightBtn {
+  background: transparent;
+  border: none;
 }

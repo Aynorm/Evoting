@@ -8,12 +8,6 @@
     <link rel="icon" type href="pictures/real estate logo.png" />
   </head>
   <body>
-    <style>
-      .light-mode {
-        color: black !important;
-        background-image: url(pictures/pawel-czerwinski-_hcYZYk9Abo-unsplashlight.png) !important;
-      }
-    </style>
     <!-- <button onclick="myTheme()">switch</button> -->
     <script>
       function myTheme() {
@@ -216,7 +210,24 @@
         <br />
 
         <section>
-          <!--Slideshow-->
+          <div class="desktop-slid-div">
+            <img
+              class="desktop-slide-img"
+              src="pictures/online-voting-slider.png"
+              alt="1"
+            />
+            <img
+              class="desktop-slide-img"
+              src="pictures/other-voting-slider.png"
+              alt="2"
+            />
+            <img
+              class="desktop-slide-img"
+              src="pictures/education-voting-slider.png"
+              alt="3"
+            />
+          </div>
+          <!--Slideshow mobile-->
           <div class="slideshow-container">
             <div class="mySlides fade">
               <!-- <div class="numbertext">1 / 3</div> -->
@@ -234,28 +245,29 @@
             </div>
 
             <div class="mySlides fade">
-              <!-- <div class="numbertext">3 / 3</div> -->
               <img class="slide-img" src="pictures/other-voting-slider.png" />
               <div class="text">...</div>
             </div>
+          </div>
 
-            <!-- <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a> -->
-            <!--Countdown-->
-            <p class="time-left">Time Left Until Election Day</p>
+          <div
+            class="against-mobile"
+            style="display: grid; text-align: center; align-items: center"
+          >
+            <h1 class="time-left">Time Left Until Election Day</h1>
             <div class="count-down-div">
-              <!-- <p class="time-left">Time Left Until Election Day</p> -->
               <h1 class="count-down" id="count"></h1>
-              <p class="time-left">January 10, 2030</p>
+              <h3 class="time-left">January 10, 2030</h3>
             </div>
             <br />
-          </div>
-          <br />
 
-          <div style="text-align: center; display: none">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
+            <br />
+
+            <div style="text-align: center; display: none">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
           </div>
           <!-- <hr /> -->
           <!--Countdown-->

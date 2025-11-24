@@ -1,0 +1,81 @@
+<!-- make payment find out start -->
+<div class="makepayment">
+  <style>
+    /* Overlay background */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 40%;
+      height: 100%;
+      background: rgba(233, 33, 33, 0.7); /* Dark semi-transparent background */
+      display: none; /* Hidden by default */
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      backdrop-filter: blur(5px); /* Adds a blur effect to background */
+      transition: opacity 0.3s ease;
+    }
+
+    /* Popup content inside overlay */
+    .overlay-content {
+      background: white;
+      color: #333;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      width: 320px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+
+  <button id="showOverlay" onclick="openModal()">Show Overlay</button>
+
+  <!--Overlay container-->
+  <div id="overlay" class="overlay">
+    <div class="overlay-content">
+      <h1>Taleeb Ayobami</h1>
+      <button id="closeOverlay" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+</div>
+<script>
+  const overlay = document.getElementById("overlay");
+  const showBtn = document.getElementById("showOverlay");
+  const closeBtn = document.getElementById("closeOverlay");
+
+  //Show overlay
+  function openModal() {
+    showBtn.addEventListener("click", () => {
+      overlay.style.display = "flex";
+    });
+  }
+
+  function closeModal() {
+    //Close overlay
+    closeBtn.addEventListener("click", () => {
+      overlay.style.display = "none";
+    });
+  }
+
+  //Close overlay when user clicks outside content
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) {
+      overlay.style.display = "none";
+    }
+  });
+</script>
+<!-- make payment find out  last-->

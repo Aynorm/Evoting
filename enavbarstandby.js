@@ -6,7 +6,7 @@ export const desktopNav =
 <a href='https://aynorm.github.io/Evoting/eform'><button class='desktopbtn-reg-contact'>Register</button></a>\
 <a href='https://aynorm.github.io/Evoting/econtact'><button class='desktopbtn-reg-contact'>Contact</button></a></div></div>\
 <div class='div-light-dark-hello'>\
-<div class='div-background-switch' style='display: flex'><button onclick='myTheme()'><input class='switch-input' type='checkbox'></button><p>dark/light</p></div>\
+<div class='div-background-switch' style='display: flex'><button class='lightBtn' onclick='myTheme()'><input class='switch-input' type='checkbox'></button><p>dark/light</p></div>\
 <div class='div-hello-user'><h3>Hello, <span class='user-span'><img class='img-user' src='pictures/user.png' alt='user'></span></h3></div>\
 </div>\
 </div>";
