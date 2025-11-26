@@ -116,7 +116,7 @@
             />
           </div>
 
-          <div style="text-align: center; align-items: center">
+          <div>
             <h1>
               FACE OF SOCIAL MEDIA 2030 <br /><span
                 >(online voting Contest)</span
@@ -126,29 +126,29 @@
             <h2>DATE: <span>Sat April 18 2030</span></h2>
             <h2>TIME:<span>06:06</span></h2>
 
-            <div style="text-align: center">
-              <p>Share Contest</p>
+            <div>
+              <p style="color: gray">Share Contest</p>
 
               <ul class="media" style="display: flex">
                 <li>
                   <img
                     class="social-media-icon"
                     src="pictures/7.facebook.png"
-                    alt="fb"
+                    alt="facebook"
                   />
                 </li>
                 <li>
                   <img
                     class="social-media-icon"
-                    src="pictures/7.facebook.png"
-                    alt="twitter"
+                    src="pictures/8.instagram.png"
+                    alt="instagram"
                   />
                 </li>
                 <li>
                   <img
                     class="social-media-icon"
-                    src="pictures/7.facebook.png"
-                    alt="telegram"
+                    src="pictures/9.twitter.png"
+                    alt="x(twitter)"
                   />
                 </li>
                 <li>
@@ -161,30 +161,77 @@
                 <li>
                   <img
                     class="social-media-icon"
-                    src="pictures/7.facebook.png"
-                    alt="email"
+                    src="pictures/12.youtube.png"
+                    alt="youtube"
                   />
                 </li>
               </ul>
             </div>
 
-            <div style="gap: 5px; text-align: center">
+            <div style="gap: 5px">
               <button class="discription-btn">Form description</button>
               <button class="discription-btn">Organizer details</button>
             </div>
           </div>
         </div>
+        <hr />
+
+        <!--POP UP-->
+
+        <button id="openPopBtn">Open Popup</button>
+        <div
+          style="
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            padding: 15px;
+            top: 0%;
+            left: 0%;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+          "
+          id="popup"
+          class="popup"
+        >
+          <div
+            style="
+              background-color: hsl(0, 0%, 0%, 0.8);
+              backdrop-filter: blur(10px);
+              width: 1000px;
+              height: 500px;
+              border-radius: 14px;
+              border: 1px solid hsl(0, 0%, 50%, 0.5);
+              padding: 20px;
+            "
+            class="popup-content"
+          >
+            <h2>Organizer Details</h2>
+            <p>This is a popup !</p>
+            <button id="popCloseBtn">close</button>
+          </div>
+        </div>
+
+        <script>
+          const openPopBtn = document.getElementById("openPopBtn");
+          const popCloseBtn = document.getElementById("popCloseBtn");
+          const popup = document.getElementById("popup");
+
+          openPopBtn.onclick = () => (popup.style.display = "flex");
+          popCloseBtn.onclick = () => (popup.style.display = "none");
+        </script>
 
         <hr />
 
         <div class="details-form-general">
           <div class="details-container">
             <div class="details-div">
-              <h1>Details</h1>
+              <h1 style="margin: 2px">Details</h1>
               <p>Aynorm Media</p>
             </div>
             <div class="present-div">
-              <p><strong>Present</strong></p>
+              <h2 style="margin: 2px"><strong>Present</strong></h2>
               <p>Face of Social media 2030</p>
               <p>Online Voting...</p>
               <p>Form is free</p>
@@ -297,10 +344,10 @@
           flex-wrap: wrap;
         }
 
-        h1,
+        /* h1,
         h2 {
           font-size: larger;
-        }
+        } */
         p {
           font-size: small;
         }
@@ -310,14 +357,14 @@
         box-sizing: border-box;
       }
 
-      div,
+      /* div,
       h1,
       h2,
       h3,
       h4,
       p {
         padding: 0%;
-      }
+      } */
 
       input {
         width: 100%;

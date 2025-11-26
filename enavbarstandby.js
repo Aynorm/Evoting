@@ -17,7 +17,7 @@ export const topBar =
   <div class='div-dsp-logo'><img class='dsp-logo' src='real estate logo.png' alt='dsp-logo'><p class='p-logo'><a href='https://aynorm.github.io/Evoting/evoting.html#'>E-Voting</a></p></div>\
   <div class='div-desktopbtn-reg-contact'>\
   <div class=''><a href='https://aynorm.github.io/Evoting/eform'><button class='desktopbtn-reg-contact'>Register</button></a></div>\
-  <div class=''><a href='https://aynorm.github.io/Evoting/econtact'><button class='desktopbtn-reg-contact'>Contact</button></a></div>\
+  <div class=''><a href='https://aynorm.github.io/Evoting/econtact'><button class='desktopbtn-reg-contact'>Contact</button></a></div><button class='lightBtn' onclick='myTheme()'><input class='switch-input' type='checkbox'></button>\
   </div>\
   </div>\
   ";

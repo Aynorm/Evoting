@@ -11,7 +11,7 @@
   h2,
   h3,
   p {
-    font-size: medium !important;
+    font-size: x-large !important;
   }
 
   p {
@@ -159,7 +159,6 @@ div {
 h2 {
   font-weight: 700;
   font-size: 30px;
-  text-align: center;
 }
 
 p {
@@ -292,7 +291,7 @@ li {
 
 .div-desktopbtn-reg-contact {
   background-color: hsl(0, 0%, 100%, 0.1);
-  display: flex;
+  display: flex !important;
   padding: 10px;
   border-radius: 12px;
   gap: 10px;
@@ -1168,4 +1167,5 @@ p {
 .lightBtn {
   background: transparent;
   border: none;
+  margin-left: -10px;
 }
