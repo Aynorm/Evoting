@@ -102,6 +102,7 @@
 
   .main-page {
     margin-bottom: 66px;
+    padding: 5px;
   }
 
   .why-choose-us {
@@ -167,7 +168,7 @@ p {
 
 a {
   text-decoration: none;
-  color: white;
+  /* color: white; */
 }
 
 li {
@@ -268,8 +269,8 @@ li {
 }
 
 .general-welcome {
-  background-color: hsl(240, 8%, 16%, 0.5);
-  height: 70px;
+  background-color: hsl(0, 0%, 100%, 0.05);
+  height: 80px;
   max-width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -303,7 +304,7 @@ li {
   border: none;
   font-weight: 700;
   cursor: pointer;
-  background-color: hsl(0, 0%, 100%, 0.5);
+  background-color: hsl(39, 100%, 50%, 0.8);
   color: white;
 }
 
@@ -451,6 +452,7 @@ li {
   width: 100%;
   background-color: transparent;
   border-radius: 10px;
+  border: 1px solid hsl(0, 0%, 50%, 0.5);
 }
 
 .desktop-slid-div {
@@ -459,7 +461,7 @@ li {
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 50%; */
-  background-color: hsl(0, 0%, 100%, 0.2);
+  background-color: hsl(0, 0%, 100%, 0.05);
   backdrop-filter: blur(10px);
   border: 1px solid hsl(0, 0%, 50%, 0.5);
   padding: 10px;
@@ -576,7 +578,7 @@ li {
   max-width: 100%;
   border-radius: 14px;
   border: 1px solid gray;
-  background-color: hsl(0, 0%, 100%, 0.1);
+  background-color: hsl(0, 0%, 100%, 0.05);
   backdrop-filter: blur(10px);
 }
 
@@ -611,7 +613,7 @@ li {
 }
 
 .alt-business {
-  background-color: hsl(0, 0%, 100%, 0.1);
+  background-color: hsl(0, 0%, 100%, 0.05);
   width: 300px;
   padding: 20px 10px 20px 10px;
   border-radius: 14px;
@@ -674,10 +676,11 @@ li {
 .call {
   flex-grow: 1;
   flex-basis: 200;
-  background-color: hsl(0, 7%, 46%, 0.2);
+  background-color: hsl(0, 7%, 46%, 0.05);
   padding: 30px 0px 30px 0px;
   border: 1px solid gray;
   border-radius: 12px;
+  backdrop-filter: blur(50px);
 }
 
 .call:hover {
@@ -692,15 +695,15 @@ li {
 .call-btn {
   height: 50px;
   width: 200px;
-  border: none;
   background-color: hsl(0, 0%, 100%, 0.8);
+  border: 1px solid hsl(0, 0%, 50%, 0.5);
   color: black;
   border-radius: 5px;
   font-weight: 700;
 }
 
 .call-btn:hover {
-  background-color: white;
+  background-color: orange;
 }
 
 .call-color {
@@ -772,10 +775,14 @@ li {
 }
 
 .ndp-img {
-  width: 100%;
-  height: 100%;
+  padding: 5px;
+  width: 90%;
+  height: 90%;
   max-width: 80px;
   border-radius: 50%;
+  filter: grayscale(100%);
+  opacity: 50%;
+  border: 1px solid gray;
 }
 
 /* Login css */
@@ -964,9 +971,9 @@ span.psw {
 }
 
 .js-general-nav {
-  background-color: hsl(240, 8%, 16%, 0.5);
-  backdrop-filter: blur(10px);
-  border: 1px solid gray;
+  background-color: hsl(0, 0%, 100%, 0.05);
+  backdrop-filter: blur(60px);
+  border: 1px solid hsl(0, 0%, 50%, 0.5);
   border-radius: 14px;
   align-items: center;
   width: 220px;
