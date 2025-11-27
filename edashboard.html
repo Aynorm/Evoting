@@ -94,16 +94,16 @@
               max-width: 400px;
               height: auto;
               padding-bottom: 300px;
-              background: hsl(224, 55%, 12%, 0.9);
+              background: hsl(224, 55%, 12%, 0.5);
               /* Dark semi-transparent background */
               display: none; /* Hidden by default */
               justify-content: center;
               align-items: center;
               z-index: 999;
               backdrop-filter: blur(
-                10px
+                100px
               ); /* Adds a blur effect to background */
-              transition: opacity 0.3s ease;
+              transition: 0.5s;
             }
 
             /* Popup content inside overlay */
@@ -114,11 +114,15 @@
               padding: 0px 10px 0px 10px;
               border-radius: 12px;
               width: 100%;
-              box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+              /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); */
             }
           </style>
 
-          <button id="showOverlay" onclick="showOverlayBtn()">
+          <button
+            style="display: none"
+            id="showOverlay"
+            onclick="showOverlayBtn()"
+          >
             Show Overlay
           </button>
 
@@ -245,14 +249,10 @@
         </script>
         <!--make payment find out  last-->
 
-        <!--Real make payment overlay start-->
-        <style></style>
-        <button id="paymentOpenBtn">Make Payment</button>
-
         <!--Real make payment overlay end-->
         <div
           style="
-            background-color: hsl(0, 0%, 100%, 0.1);
+            background-color: hsl(0, 0%, 100%, 0.05);
             backdrop-filter: blur(10px);
             border-radius: 14px;
             border: 1px solid hsl(0, 0%, 50%, 0.5);
@@ -295,10 +295,7 @@
         <h1 style="margin: 10px 0px 10px 0px; text-align: center">
           Vote for Your Favorite
         </h1>
-        <div
-          class="contestant-container"
-          style="background-color: hsl(0, 0%, 0%, 0.4)"
-        >
+        <div class="contestant-container">
           <div class="contestant-div">
             <p class="constestant-paragraph">Adeola Mariam</p>
             <img
@@ -535,13 +532,22 @@
             </div>
           </div>
         </div>
-        <button
-          class="desktopbtn-reg-contact"
-          style="cursor: pointer"
-          onclick="openNav()"
+        <div
+          style="
+            text-align: center;
+            justify-items: center;
+            justify-content: center;
+            margin-top: 5px;
+          "
         >
-          Results
-        </button>
+          <button
+            class="desktopbtn-reg-contact resultBtn"
+            style="background-color: orangered"
+            onclick="openNav()"
+          >
+            Results
+          </button>
+        </div>
       </div>
     </div>
 
@@ -709,13 +715,12 @@
         color: white;
       }
       .sconst-btn {
-        background-color: white;
+        background-color: hsl(0, 0%, 100%, 0.8);
         color: black;
-        border: none;
-        font-size: 1rem;
-        border-radius: 14px;
+        font-size: 0.7rem;
+        border-radius: 10px;
+        border: 1px solid hsl(0, 0%, 50%, 0.5);
         width: 50%;
-        height: 30px;
         font-weight: 700;
         cursor: pointer;
         padding: 10px 20px 10px 20px;
@@ -733,18 +738,22 @@
         gap: 10px;
         text-align: center;
         border: 1px solid hsl(0, 0%, 50%, 0.5);
+        background-color: hsl(0, 0%, 100%, 0.05);
+        /* backdrop-filter: blur(10px); */
         border-radius: 14px;
       }
 
       .contestant-div {
-        flex-grow: 1;
-        flex-basis: 00;
+        justify-content: center;
+        text-align: center;
+        /* flex-grow: 1; */
+        /* flex-basis: 200; */
       }
 
       .contestant-img {
-        width: 200px;
+        max-width: 150px;
         border-radius: 10px;
-        border: 1px solid white;
+        border: 1px solid hsl(0, 0%, 50%, 0.5);
       }
 
       .result-1 {
@@ -818,6 +827,10 @@
         top: 20px;
         right: 45px;
         font-size: 30px;
+      }
+
+      .result-Btn {
+        background-color: orangered !important;
       }
 
       /* @media screen and (max-height: 450px) {
