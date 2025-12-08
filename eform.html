@@ -321,7 +321,7 @@
               <div class="enquiry-div">
                 <p>For more Enquiries</p>
                 <p>media@aynorm.com</p>
-                <p>Call <span>08140156931</span></p>
+                <p>Call <span style="color: orangered">08140156931</span></p>
               </div>
             </div>
           </div>
@@ -329,32 +329,77 @@
           <div class="form-container">
             <form action="">
               <h1>Registration Form</h1>
-
-              <label for="">Enter the following details and cotinue</label
-              ><br />
-              <input type="email" name="email" placeholder="Email Address" />
-
-              <h1>FACE OF SOCIAL MEDIA 2030</h1>
+              <h2>FACE OF SOCIAL MEDIA 2030</h2>
               <h2>How to Register</h2>
+              <h3>Enter the following details and cotinue</h3>
+              <input type="email" id="email" placeholder="Email Address" />
+              <p id="mail"></p>
 
-              <input type="text" placeholder="Full Name" /><br />
+              <input id="fullname" type="text" placeholder="Full Name" /><br />
 
-              <input type="number" placeholder="WhatsApp No." /><br />
+              <input
+                id="whatsapp"
+                type="text"
+                placeholder="WhatsApp No."
+                maxlength="11"
+              /><br />
 
-              <input type="number" name="numbertext" placeholder="Age" /><br />
+              <input
+                id="age"
+                type="text"
+                name="numbertext"
+                placeholder="Age"
+                maxlength="2"
+              /><br />
 
-              <input type="text" placeholder="Location" /><br />
+              <input id="location" type="text" placeholder="Location" /><br />
 
-              <textarea name="" id="" placeholder="Short Bio:"></textarea><br />
+              <textarea
+                id="bio"
+                name=""
+                id="bio"
+                placeholder="Short Bio:"
+              ></textarea
+              ><br />
 
-              <label for="">Picture</label><br />
-              <input type="file" name="picture" />
-              <button class="discription-btn">Submit</button>
+              <input id="picture" type="file" name="picture" accept="image/*" />
+
+              <button id="submitBtn" class="discription-btn">Submit</button>
+
+              <!--Script for form-->
+              <script>
+                document
+                  .getElementById("submitBtn")
+                  .addEventListener("click", function (event) {
+                    event.preventDefault(); //stop page refresh
+
+                    let email = document.getElementById("email").value;
+                    document.getElementById("mail").innerHTML = email;
+
+                    let fullname = document.getElementById("fullname").value;
+
+                    let whatsapp = document.getElementById("whatsapp").value;
+
+                    let age = document.getElementById("age").value;
+
+                    let location = document.getElementById("location").value;
+
+                    let bio = document.getElementById("bio").value;
+
+                    let picture = document.getElementById("picture").files[0];
+
+                    alert("Thanks for submitting your info");
+                  });
+              </script>
 
               <p>
                 OR Send Your Full name(nickname), Age, Location, Picture. via
-                WhatsApp; 08140156931.
+                WhatsApp;<span style="color: orangered; cursor: pointer"
+                  ><a href=" https://wa.me/+2348140156931"></a>
+                  08140156931</span
+                >.
               </p>
+
               <marquee behavior="" direction="left">Form Open</marquee>
             </form>
           </div>

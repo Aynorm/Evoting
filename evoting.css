@@ -270,7 +270,7 @@ li {
 }
 
 .general-welcome {
-  background-color: hsl(225, 57%, 12%, 0.9);
+  background-color: hsl(225, 57%, 12%, 0.5);
   height: 80px;
   max-width: 100%;
   display: grid;
@@ -968,7 +968,7 @@ span.psw {
 }
 
 .js-general-nav {
-  background-color: hsl(225, 57%, 12%, 0.9);
+  background-color: hsl(225, 57%, 12%, 0.5);
   backdrop-filter: blur(60px);
   border: 1px solid hsl(0, 0%, 50%, 0.5);
   border-radius: 14px;
