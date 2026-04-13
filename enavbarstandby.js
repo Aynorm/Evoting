@@ -55,33 +55,33 @@ export const navBottom =
   <ul class='ul-navBottom'>\
   <li class='li-navBottom'>\
   <a href='#'>\
-  <p class='mobile-p'>Events</p>\
   <img class='icon-navBottom' src = 'event calendar-icon.png' alt = 'events'>\
+    <p class='mobile-p'>Events</p>\
   </a>\
   </li>\
   <li class='li-navBottom'>\
     <a href='https://aynorm.github.io/Evoting/eservices'>\
-  <p class='mobile-p'>Services</p>\
   <img class='icon-navBottom' src = 'services hand-shake-icon.png' alt = 'services'>\
+    <p class='mobile-p'>Services</p>\
     </a>\
   </li>\
   <li class='li-navBottom'>\
     <a href='https://aynorm.github.io/Evoting//edashboard'>\
-  <p class='mobile-p'>Vote</p>\
   <img class='icon-navBottom' src = 'ballot-box-voting-icon.png' alt = 'voting'>\
+    <p class='mobile-p'>Vote</p>\
     </a>\
   </li>\
   </li>\
   <li class='li-navBottom'>\
    <a href='#'>\
-  <p class='mobile-p'>Pricing</p>\
   <img class='icon-navBottom' src = 'pricing hand-money-income-dollar-icon.png' alt = 'pricing'>\
+    <p class='mobile-p'>Pricing</p>\
     </a>\
   </li>\
   <li class='li-navBottom'>\
   <a href='https://aynorm.github.io/Evoting/eabout'>\
-  <p class='mobile-p'>About</p>\
   <img class='icon-navBottom' src = 'about info-circle-line-icon.png' alt = 'about'>\
+  <p class='mobile-p'>About</p>\
     </a>\
   </li>\
   </ul >\

@@ -92,12 +92,14 @@
 
   div.general-navBottom {
     position: fixed;
+    padding: 5px;
     width: 100%;
     bottom: 10px;
-    border: 1px solid white;
+    border: 1px solid gray;
+    border-radius: 70px;
     background-color: hsl(224, 55%, 12%, 0.5);
     backdrop-filter: blur(10px);
-    margin-bottom: -10px;
+    margin-bottom: -6px;
   }
 
   .main-page {
@@ -1104,15 +1106,14 @@ a {
 .li-navBottom {
   text-align: center;
   align-items: center;
-  font-weight: 900;
-  padding: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
   cursor: pointer;
 }
 
 .li-navBottom:hover {
   background-color: hsl(180, 8%, 3%, 0.3);
   border-radius: 10px;
-  padding: 5px;
 }
 
 .ul-navBottom {
@@ -1124,7 +1125,7 @@ a {
 }
 
 .icon-navBottom {
-  max-width: 40px;
+  max-width: 35px;
   padding: 3px;
   border-radius: 10px;
 }
