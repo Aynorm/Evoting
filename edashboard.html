@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,913 +6,123 @@
     <link rel="stylesheet" href="evoting.css" />
 
     <title>Voting</title>
+    <style>
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+      }
+
+      .image-box {
+        position: relative;
+        width: 160px;
+        background: transparent;
+        border: 1px solid gray;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .image-box img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+    </style>
   </head>
   <body>
     <script>
+      //For theme changer
       function myTheme() {
         var element = document.body;
         element.classList.toggle("light-mode");
       }
     </script>
+
     <div id="topBar"></div>
     <div id="leftBar"></div>
     <div class="side-maincontent">
       <div class="" id="leftBar"></div>
       <div class="admin-all-container main-page">
         <div class="" id="desktopNav"></div>
+        <h1>Miss Nigeria</h1>
 
-        <!-- make payment find out start -->
+        <div class="gallery" id="gallery"></div>
 
-        <div class="makepayment">
-          <style>
-            /* .payment-container {
-              background: hsl(0, 0%, 100%, 0.6);
-              backdrop-filter: blur(100px);
-              padding: 30px;
-              border-radius: 12px;
-              width: 40%;
-              box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
-              z-index: 999;
-            } */
-
-            /* h2 {
-            text-align: center;
-            margin-bottom: 2px;
-            color: #333;
-          } */
-
-            .paymentLabel {
-              color: white;
-              font-weight: 500;
-              display: block;
-              margin-bottom: 1px;
-            }
-
-            .paymentInput {
-              width: 100%;
-              padding: 10px;
-              margin-bottom: 15px;
-              border-radius: 6px;
-              border: 1px solid #ccc;
-              color: black !important;
-              outline: none;
-            }
-
-            .card-row {
-              display: flex;
-              justify-content: space-between;
-              gap: 10px;
-            }
-
-            .paymentBtn {
-              width: 100%;
-              background: orangered;
-              border: none;
-              color: white;
-              padding: 12px;
-              border-radius: 6px;
-              font-size: 16px;
-              cursor: pointer;
-            }
-
-            .paymentBtn:hover {
-              background: orange;
-            }
-
-            #status {
-              text-align: center;
-              margin-top: 15px;
-              font-weight: bold;
-            }
-
-            /* Overlay background */
-            .moverlay {
-              position: fixed;
-              top: 0;
-              left: 0;
-              width: 100%;
-              max-width: 400px;
-              height: auto;
-              padding-bottom: 300px;
-              background: hsl(224, 55%, 12%, 0.5);
-              /* Dark semi-transparent background */
-              display: none; /* Hidden by default */
-              justify-content: center;
-              align-items: center;
-              z-index: 999;
-              backdrop-filter: blur(
-                100px
-              ); /* Adds a blur effect to background */
-              transition: 0.5s;
-            }
-
-            /* Popup content inside overlay */
-            .moverlay-content {
-              margin-top: 0px !important;
-              background: transparent;
-              color: white;
-              padding: 0px 10px 0px 10px;
-              border-radius: 12px;
-              width: 100%;
-              /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); */
-            }
-          </style>
-
-          <button
-            style="display: none"
-            id="showOverlay"
-            onclick="showOverlayBtn()"
-          >
-            Show Overlay
-          </button>
-
-          <!-- Overlay container -->
-          <div id="moverlay" class="moverlay">
-            <button
-              class="sclosebtn"
-              style="
-                font-size: 30px;
-                margin-left: 85%;
-                border: none;
-                background-color: transparent;
-                color: white;
-                border-radius: 6px;
-                cursor: pointer;
-              "
-              id="closeOverlay"
-              onclick="closeOverlayBtn()"
-            >
-              <a href="javascript:void(0)">×</a>
-            </button>
-            <div class="moverlay-content">
-              <div id="paymentOverlay" class="payment-container">
-                <h2 style="margin-bottom: 10px">Payment Gateway</h2>
-
-                <form id="paymentForm">
-                  <label class="paymentLabel">Cardholder Name</label>
-                  <input
-                    class="paymentInput"
-                    type="text"
-                    id="cardName"
-                    placeholder="John Doe"
-                    required
-                  />
-
-                  <label class="paymentLabel">Card Number</label>
-                  <input
-                    class="paymentInput"
-                    type="number"
-                    id="cardNumber"
-                    placeholder="1111 2222 3333 4444"
-                    maxlength="19"
-                    required
-                  />
-
-                  <div class="card-row">
-                    <div>
-                      <label class="paymentLabel">Expiry Date</label>
-                      <input
-                        class="paymentInput"
-                        type="text"
-                        id="expiry"
-                        placeholder="MM/YY"
-                        maxlength="5"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label class="paymentLabel">CVV</label>
-                      <input
-                        class="paymentInput"
-                        type="password"
-                        id="cvv"
-                        placeholder="123"
-                        maxlength="3"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <label class="paymentLabel">Amount</label>
-                  <input
-                    class="paymentInput"
-                    type="number"
-                    id="amount"
-                    placeholder="Enter amount"
-                    required
-                  />
-
-                  <button
-                    class="paymentBtn"
-                    type="submit"
-                    onclick="vote('Option 1')"
-                  >
-                    Pay Now
-                  </button>
-                </form>
-
-                <p id="status"></p>
-              </div>
-            </div>
-          </div>
-        </div>
         <script>
-          const overlay = document.getElementById("moverlay");
-          const showBtn = document.getElementById("showOverlay");
-          const closeBtn = document.getElementById("closeOverlay");
+          const gallery = document.getElementById("gallery");
 
-          //Show overlay
-          function showOverlayBtn() {
-            showBtn.addEventListener("click", () => {
-              overlay.style.display = "block";
+          // 📦 Get images
+          function getImages() {
+            return JSON.parse(localStorage.getItem("gallery")) || [];
+          }
+
+          // 📦 Get votes
+          function getVotes() {
+            return JSON.parse(localStorage.getItem("votes")) || {};
+          }
+
+          // 💾 Save votes
+          function saveVotes(votes) {
+            localStorage.setItem("votes", JSON.stringify(votes));
+          }
+
+          // 🖼️ Display images + voting
+          function displayImages() {
+            gallery.innerHTML = "";
+
+            const images = getImages();
+            const votes = getVotes();
+
+            images.forEach((item, index) => {
+              const box = document.createElement("div");
+              box.classList.add("image-box");
+
+              const img = document.createElement("img");
+              img.src = item.src;
+
+              const caption = document.createElement("div");
+              caption.textContent = item.caption;
+
+              const voteCount = document.createElement("p");
+              voteCount.textContent = "Votes: " + (votes[index] || 0);
+
+              const voteBtn = document.createElement("button");
+              voteBtn.textContent = "Vote";
+
+              voteBtn.onclick = function () {
+                let votes = getVotes();
+
+                votes[index] = (votes[index] || 0) + 1;
+                saveVotes(votes);
+
+                // save selected image for payment
+                localStorage.setItem("selectedImage", index);
+
+                // go to payment page
+                window.location.href = "payment.html";
+              };
+
+              box.appendChild(img);
+              box.appendChild(caption);
+              box.appendChild(voteCount);
+              box.appendChild(voteBtn);
+
+              gallery.appendChild(box);
             });
           }
 
-          //Close overlay
-          function closeOverlayBtn() {
-            closeBtn.addEventListener("click", () => {
-              overlay.style.display = "none";
-            });
-          }
-
-          //Close overlay when user clicks outside content
-          overlay.addEventListener("click", (e) => {
-            if (e.target === overlay) {
-              overlay.style.display = "none";
-            }
-          });
+          // auto refresh
+          setInterval(displayImages, 1000);
+          displayImages();
         </script>
-        <!--make payment find out  last-->
-
-        <!--Real make payment overlay end-->
-        <div
-          style="
-            background-color: hsl(0, 0%, 100%, 0.05);
-            backdrop-filter: blur(10px);
-            border-radius: 14px;
-            border: 1px solid hsl(0, 0%, 50%, 0.5);
-            padding: 10px;
-            margin-top: 10px;
-          "
-          class="contest-banner-div"
-        >
-          <div
-            style="
-              display: flex;
-              flex-wrap: wrap;
-              gap: 10px;
-              justify-content: space-between;
-            "
-          >
-            <h1>FACE OF SOCIAL MEDIA 2030</h1>
-            <div>
-              <h2>DATE: <span>Sat January 2030</span></h2>
-              <h2>TIME: <span>00:00</span></h2>
-            </div>
-          </div>
-          <div style="text-align: center">
-            <img
-              class="constest-banner-img"
-              src="pictures/facesocial1.png"
-              alt="contest"
-            />
-          </div>
-
-          <p class="contestant-banner-paragraph">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-            nam exercitationem non illum cumque! Consectetur, blanditiis. Quis
-            sit rerum doloremque tempore, quae consequuntur autem, quasi quidem
-            temporibus perferendis neque error!
-          </p>
-        </div>
-
-        <!-- Contestant -->
-        <h1 style="margin: 10px 0px 10px 0px; text-align: center">
-          Vote for Your Favorite
-        </h1>
-        <div class="contestant-container">
-          <div class="contestant-div">
-            <p class="constestant-paragraph">Adeola Mariam</p>
-            <img
-              class="contestant-img"
-              src="pictures/mariam 2x2.jpg"
-              alt="contestant"
-            /><br />
-
-            <div id="myVote" class="soverlay">
-              <a
-                href="javascript:void(0)"
-                class="sclosebtn"
-                onclick="closeVote()"
-                >&times;</a
-              >
-              <div class="soverlay-content">
-                <img
-                  class="sfirst-const-img"
-                  src="pictures/mariam 2x2.jpg"
-                  alt="Option"
-                />
-                <p class="sfirst-const-paragraph">Adeola Mariam</p>
-
-                <p>1 x $1.04 = $1.05 (incl. VAT)</p>
-
-                <hr />
-                <div class="sSpace between"></div>
-                <hr />
-                <h3>Subtotal: $1.05 (include. VAT)</h3>
-                <!-- <button class="make-payment-btn" onclick="vote('Option 1')">
-                  Make Payment
-                </button> -->
-                <button class="make-payment-btn" onclick="openPayment()">
-                  Proceed to Payment
-                </button>
-                <div class=""></div>
-              </div>
-            </div>
-            <span class="sconst-btn" onclick="openVote()"> Vote</span>
-
-            <script>
-              function openPayment() {
-                document.getElementById("myVote1").style.display = "none";
-                document.getElementById("moverlay").style.display = "grid";
-              }
-            </script>
-          </div>
-
-          <div class="contestant-div">
-            <p class="constestant-paragraph">Andy Smith</p>
-            <img
-              class="contestant-img"
-              src="pictures/andy smith.jpeg"
-              alt="contestant"
-            /><br />
-            <div id="myVote1" class="soverlay">
-              <a
-                href="javascript:void(0)"
-                class="sclosebtn"
-                onclick="closeVote1()"
-                >&times;</a
-              >
-              <div class="soverlay-content">
-                <img
-                  class="sfirst-const-img"
-                  src="pictures/andy smith.jpeg"
-                  alt="Option"
-                />
-                <p class="sfirst-const-paragraph">Andy Smith</p>
-
-                <p>1 x $1.04 = $1.05 (incl. VAT)</p>
-
-                <hr />
-                <div class="sSpace between"></div>
-
-                <h3>Subtotal: $1.05 (include. VAT)</h3>
-                <button class="make-payment-btn" onclick="vote('Option 2')">
-                  Proceed to Payment
-                </button>
-              </div>
-            </div>
-            <span class="sconst-btn" onclick="openVote1()"> Vote</span>
-
-            <!-- <button class="sconst-btn" onclick="vote('Option 2')">Vote</button> -->
-          </div>
-
-          <div class="contestant-div">
-            <p class="constestant-paragraph">Afolake Olaore</p>
-            <img
-              class="contestant-img"
-              src="pictures/mom 2x2.jpg"
-              alt="contestant"
-            /><br />
-            <div id="myVote2" class="soverlay">
-              <a
-                href="javascript:void(0)"
-                class="sclosebtn"
-                onclick="closeVote2()"
-                >&times;</a
-              >
-              <div class="soverlay-content">
-                <img
-                  class="sfirst-const-img"
-                  src="pictures/mom 2x2.jpg"
-                  alt="Option"
-                />
-                <p class="sfirst-const-paragraph">Afolake Olaore</p>
-
-                <p>1 x $1.04 = $1.05 (incl. VAT)</p>
-
-                <hr />
-                <div class="sSpace between"></div>
-
-                <h3>Subtotal: $1.05 (include. VAT)</h3>
-                <button class="make-payment-btn" onclick="vote('Option 3')">
-                  Proceed to Payment
-                </button>
-              </div>
-            </div>
-            <span class="sconst-btn" onclick="openVote2()">Vote</span>
-            <!-- <button onclick="vote('Option 3')">Vote</button> -->
-          </div>
-
-          <div class="contestant-div">
-            <p class="constestant-paragraph">Yemisi Toyosi</p>
-            <img
-              class="contestant-img"
-              src="pictures/yemi 2x2.jpg"
-              alt="contestant"
-            /><br />
-            <div id="myVote3" class="soverlay">
-              <a
-                href="javascript:void(0)"
-                class="sclosebtn"
-                onclick="closeVote3()"
-                >&times;</a
-              >
-              <div class="soverlay-content">
-                <img
-                  class="sfirst-const-img"
-                  src="pictures/yemi 2x2.jpg"
-                  alt="Option"
-                />
-                <p class="sfirst-const-paragraph">Yemisi Toyosi</p>
-
-                <p>1 x $1.04 = $1.05 (incl. VAT)</p>
-
-                <hr />
-                <div class="sSpace between"></div>
-
-                <h3>Subtotal: $1.05 (include. VAT)</h3>
-                <button class="make-payment-btn" onclick="vote('Option 4')">
-                  Proceed to Payment
-                </button>
-              </div>
-            </div>
-            <span class="sconst-btn" onclick="openVote3()">Vote</span>
-            <!-- <button onclick="vote('Option 4')">Vote</button> -->
-          </div>
-
-          <div class="contestant-div">
-            <p class="constestant-paragraph">Taleeb Ayobami</p>
-            <img
-              class="contestant-img"
-              src="pictures/DSC_0099 2x2.png"
-              alt="contestant"
-            /><br />
-            <div id="myVote4" class="soverlay">
-              <a
-                href="javascript:void(0)"
-                class="sclosebtn"
-                onclick="closeVote4()"
-                >&times;</a
-              >
-              <div class="soverlay-content">
-                <img
-                  class="sfirst-const-img"
-                  src="pictures/DSC_0099 2x2.png"
-                  alt="Option"
-                />
-                <p class="sfirst-const-paragraph">Taleeb Ayobami</p>
-
-                <p>1 x $1.04 = $1.05 (incl. VAT)</p>
-
-                <hr />
-                <div class="sSpace between"></div>
-
-                <h3>Subtotal: $1.05 (include. VAT)</h3>
-                <button class="make-payment-btn" onclick="vote('Option 5')">
-                  Proceed to Payment
-                </button>
-              </div>
-            </div>
-            <span class="sconst-btn" onclick="openVote4()">Vote</span>
-            <!-- <button onclick="vote('Option 5')">Vote</button> -->
-          </div>
-        </div>
-
-        <!-- Result files -->
-        <div class="result-container overlay" id="myNav">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-            >&times;</a
-          >
-          <h2>Results</h2>
-          <div id="results" style="padding-top: 50px">
-            <div class="contestant-score overlay-content">
-              <h3>Adeola Mariam:</h3>
-              <h3 class="result-1" id="option1-count">0</h3>
-              <h3>Votes</h3>
-            </div>
-
-            <div class="contestant-score">
-              <h3>Andy Smith:</h3>
-              <h3 class="result-1" id="option2-count">0</h3>
-              <h3>Votes</h3>
-            </div>
-
-            <div class="contestant-score">
-              <h3>Afolake Olaore:</h3>
-              <h3 class="result-1" id="option3-count">0</h3>
-              <h3>Votes</h3>
-            </div>
-
-            <div class="contestant-score">
-              <h3>Yemisi Toyosi:</h3>
-              <h3 class="result-1" id="option4-count">0</h3>
-              <h3>Votes</h3>
-            </div>
-
-            <div class="contestant-score">
-              <h3>Taleeb Ayobami:</h3>
-              <h3 class="result-1" id="option5-count">0</h3>
-              <h3>Votes</h3>
-            </div>
-          </div>
-        </div>
-        <div
-          style="
-            text-align: center;
-            justify-items: center;
-            justify-content: center;
-            margin-top: 5px;
-          "
-        >
-          <button
-            class="desktopbtn-reg-contact resultBtn"
-            style="background-color: orangered"
-            onclick="openNav()"
-          >
-            Results
-          </button>
-        </div>
       </div>
     </div>
 
     <div id="navBottom"></div>
 
     <script type="module" src="eform.js"></script>
-
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-
-      div,
-      h1,
-      h2,
-      h3,
-      h4,
-      p {
-        margin: 0%;
-        padding: 0%;
-      }
-
-      .constest-banner-img {
-        width: 100%;
-        max-width: 800px;
-        border-radius: 10p;
-        border: 1px solid black;
-        padding: 10px;
-      }
-
-      .contestant-banner-paragraph {
-        padding: 10px 10px 10px 10px;
-      }
-
-      .soverlay {
-        height: 100%;
-        width: 0;
-        max-width: 400px;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: hsl(220, 26%, 14%, 0.4);
-        overflow-x: hidden;
-        transition: 0.5s;
-        backdrop-filter: blur(100px);
-      }
-
-      .soverlay-content {
-        position: relative;
-        top: 10%;
-        width: 100%;
-        text-align: center;
-        /* margin-left: 10px; */
-        /* background-color: whitesmoke; */
-      }
-
-      .soverlay a {
-        padding: 8px;
-        text-decoration: none;
-        font-size: 36px;
-        color: #818181;
-        display: block;
-        transition: 0.3s;
-      }
-
-      .soverlay a:hover,
-      .soverlay a:focus {
-        color: #f1f1f1;
-      }
-
-      .soverlay .sclosebtn {
-        position: absolute;
-        top: 1px;
-        right: 5px;
-        font-size: 30px;
-      }
-
-      .sfirst-const-img {
-        width: 50%;
-        border-radius: 10px;
-      }
-
-      .sfirst-const-paragraph {
-        font-size: 25px;
-        font-weight: 500;
-        margin: 5px;
-      }
-
-      .make-payment-btn {
-        background-color: black;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        width: 150px;
-        height: 40px;
-        margin: 5px;
-        font-weight: 700;
-        cursor: pointer;
-      }
-
-      .make-payment-btn:hover {
-        background-color: gray;
-      }
-
-      .admin-short-container {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-        margin-bottom: 20px;
-      }
-
-      .admin-div {
-        flex-grow: 1;
-        flex-basis: 200;
-      }
-
-      .admin-div {
-        width: 25%;
-        max-width: 300px;
-        min-width: 250px;
-        height: 120px;
-        border-radius: 5px;
-        background-image: url(pictures/colorful-blank-paper-texture-background-free-photo.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-      }
-      .bg-pink {
-        border-radius: 5px;
-        background-image: url(pictures/colo-pink.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-      }
-      .bg-black {
-        border-radius: 5px;
-        background-image: url(pictures/colo-black.jpeg);
-        background-repeat: no-repeat;
-        background-position: center;
-      }
-      .bg-brown {
-        border-radius: 5px;
-        background-image: url(pictures/colo-brown.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-      }
-
-      .h1-p-div {
-        padding: 5px 5px 30px 30px;
-        backdrop-filter: blur(3px);
-        border-radius: 10px;
-      }
-
-      .admin-h1 {
-        font-size: 4em;
-        font-weight: 700;
-        color: white;
-        width: 100px;
-      }
-
-      .admin-paragraph {
-        font-weight: 700;
-        font-size: 1em;
-        color: white;
-      }
-      .sconst-btn {
-        background-color: hsl(0, 0%, 100%, 0.8);
-        color: black;
-        font-size: 0.7rem;
-        border-radius: 10px;
-        border: 1px solid hsl(0, 0%, 50%, 0.5);
-        width: 50%;
-        font-weight: 700;
-        cursor: pointer;
-        padding: 10px 20px 10px 20px;
-      }
-
-      .sconst-btn:hover {
-        background-color: black;
-        color: white;
-      }
-
-      .contestant-container {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 30px 20px 30px 20px;
-        gap: 10px;
-        text-align: center;
-        justify-content: center;
-        justify-items: end;
-        border: 1px solid hsl(0, 0%, 50%, 0.5);
-        background-color: hsl(0, 0%, 100%, 0.05);
-        /* backdrop-filter: blur(10px); */
-        border-radius: 14px;
-      }
-
-      .contestant-div {
-        justify-content: center;
-        text-align: center;
-        /* flex-grow: 1; */
-        /* flex-basis: 200; */
-      }
-
-      .contestant-img {
-        max-width: 150px;
-        border-radius: 10px;
-        border: 1px solid hsl(0, 0%, 50%, 0.5);
-      }
-
-      .result-1 {
-        width: 200p;
-        height: 40px;
-        background: hsl(180, 100%, 25%, 0.1);
-        font-size: 2em;
-      }
-
-      .contestant-score {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        align-items: center;
-        border: 1px solid rgb(201, 226, 226);
-        margin-bottom: 5px;
-      }
-
-      div,
-      h1,
-      h2,
-      h3,
-      h4,
-      p {
-        padding: 0%;
-        margin: 0%;
-      }
-
-      .result-container {
-        background-color: hsl(220, 26%, 14%, 0.4);
-        backdrop-filter: blur(100px);
-      }
-
-      /*Result Overlay hide*/
-      .overlay {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        /* background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.9); */
-        overflow-x: hidden;
-        transition: 0.5s;
-      }
-
-      .overlay-content {
-        position: relative;
-        top: 25%;
-        width: 100%;
-        /* text-align: center; */
-        margin-top: 30px;
-      }
-
-      .overlay a {
-        padding: 8px;
-        text-decoration: none;
-        font-size: 36px;
-        color: #818181;
-        display: block;
-        transition: 0.3s;
-      }
-
-      .overlay a:hover,
-      .overlay a:focus {
-        color: #f1f1f1;
-      }
-
-      .overlay .closebtn {
-        position: absolute;
-        top: 20px;
-        right: 45px;
-        font-size: 30px;
-      }
-
-      .result-Btn {
-        background-color: orangered !important;
-      }
-
-      /* @media screen and (max-height: 450px) {
-        .overlay a {
-          font-size: 20px;
-        }
-
-        .overlay .closebtn {
-          font-size: 40px;
-          top: 15px;
-          right: 35px;
-        }
-      } */
-    </style>
-
-    <script>
-      // script.js
-
-      // Initialize vote counts
-      let votes = {
-        "Option 1": 0,
-        "Option 2": 0,
-        "Option 3": 0,
-        "Option 4": 0,
-        "Option 5": 0,
-      };
-
-      // Function to handle voting
-      function vote(option) {
-        votes[option]++;
-        updateResults();
-      }
-
-      // Function to update the results display
-      function updateResults() {
-        document.getElementById("option1-count").innerText = votes["Option 1"];
-        document.getElementById("option2-count").innerText = votes["Option 2"];
-        document.getElementById("option3-count").innerText = votes["Option 3"];
-        document.getElementById("option4-count").innerText = votes["Option 4"];
-        document.getElementById("option5-count").innerText = votes["Option 5"];
-      }
-
-      //Result overlay hide
-      function openNav() {
-        document.getElementById("myNav").style.width = "100%";
-      }
-      function closeNav() {
-        document.getElementById("myNav").style.width = "0%";
-      }
-
-      // For my Vote
-      function openVote() {
-        document.getElementById("myVote").style.width = "100%";
-      }
-      function closeVote() {
-        document.getElementById("myVote").style.width = "0%";
-      }
-
-      function openVote1() {
-        document.getElementById("myVote1").style.width = "100%";
-      }
-      function closeVote1() {
-        document.getElementById("myVote1").style.width = "0%";
-      }
-
-      function openVote2() {
-        document.getElementById("myVote2").style.width = "100%";
-      }
-      function closeVote2() {
-        document.getElementById("myVote2").style.width = "0%";
-      }
-
-      function openVote3() {
-        document.getElementById("myVote3").style.width = "100%";
-      }
-      function closeVote3() {
-        document.getElementById("myVote3").style.width = "0%";
-      }
-
-      function openVote4() {
-        document.getElementById("myVote4").style.width = "100%";
-      }
-      function closeVote4() {
-        document.getElementById("myVote4").style.width = "0%";
-      }
-    </script>
   </body>
 </html>
