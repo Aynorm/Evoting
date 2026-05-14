@@ -2,13 +2,30 @@
 <html>
   <head>
     <title>Vault Admin Panel</title>
-    <link rel="stylesheet" href="vault.cs" />
+    <link rel="stylesheet" href="vault.css" />
+    <link rel="stylesheet" href="evoting.css" />
+    <link rel="stylesheet" href="evoting.js" />
   </head>
-  <body>
-    <h2>Vault Admin Control</h2>
 
-    <input type="file" id="imageInput" accept="image/*" multiple />
-    <div id="gallery"></div>
+  <body>
+    <!-- <button onclick="myTheme()">switch</button> -->
+    <script>
+      function myTheme() {
+        var element = document.body;
+        element.classList.toggle("light-mode");
+      }
+    </script>
+    <div id="topBar"></div>
+    <div class="side-maincontent">
+      <div class="" id="leftBar"></div>
+      <div class="main-page">
+        <div class="" id="desktopNav"></div>
+        <h2>Vault Admin Control</h2>
+
+        <input type="file" id="imageInput" accept="image/*" multiple />
+        <div id="gallery" class="gallery"></div>
+      </div>
+    </div>
 
     <script>
       const imageInput = document.getElementById("imageInput");
@@ -32,6 +49,7 @@
 
         images.forEach((item, index) => {
           const box = document.createElement("div");
+          box.classList.add("image-box");
 
           const img = document.createElement("img");
           img.src = item.src;
@@ -39,6 +57,7 @@
 
           const input = document.createElement("input");
           input.value = item.caption;
+          input.style.width = "80%";
 
           const saveBtn = document.createElement("button");
           saveBtn.textContent = "Update";
@@ -88,5 +107,10 @@
       // Load admin view
       displayImages();
     </script>
+    <div id="navBottom"></div>
+
+    <!--Javascricpt-->
+    <script type="module" src="evoting.js"></script>
+    <script type="module" src="eform.js"></script>
   </body>
 </html>

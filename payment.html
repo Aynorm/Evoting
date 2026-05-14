@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vote Payment</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        padding: 20px;
+      }
+
+      .payment-container {
+        width: 100%;
+        max-width: 400px;
+        background: #fff;
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        animation: fadeIn 0.5s ease;
+      }
+
+      .payment-icon {
+        width: 80px;
+        height: 80px;
+        background: #2a5298;
+        color: #fff;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
+      }
+
+      h2 {
+        color: #222;
+        margin-bottom: 10px;
+      }
+
+      .description {
+        color: #666;
+        font-size: 15px;
+        margin-bottom: 25px;
+        line-height: 1.5;
+      }
+
+      .vote-info {
+        background: #f4f7ff;
+        padding: 15px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        color: #1e3c72;
+        font-weight: bold;
+      }
+
+      .amount-box {
+        margin-bottom: 25px;
+      }
+
+      .amount-box h3 {
+        color: #444;
+        margin-bottom: 8px;
+      }
+
+      .amount {
+        font-size: 35px;
+        color: #2a5298;
+        font-weight: bold;
+      }
+
+      button {
+        width: 100%;
+        padding: 15px;
+        border: none;
+        border-radius: 12px;
+        background: #2a5298;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background: #1e3c72;
+        transform: translateY(-2px);
+      }
+
+      .secure {
+        margin-top: 15px;
+        color: #777;
+        font-size: 13px;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="payment-container">
+      <div class="payment-icon">💳</div>
+
+      <h2>Complete Your Vote Payment</h2>
+
+      <p class="description">
+        Secure your vote instantly and support your favorite contestant.
+      </p>
+
+      <div class="vote-info" id="info">Loading vote...</div>
+
+      <div class="amount-box">
+        <h3>Amount</h3>
+        <div class="amount">₦500</div>
+      </div>
+
+      <button onclick="pay()">Pay Now</button>
+
+      <p class="secure">🔒 Secure Payment Gateway</p>
+    </div>
+
+    <script>
+      const info = document.getElementById("info");
+
+      // Get selected image
+      const selected = localStorage.getItem("selectedImage");
+
+      if (selected) {
+        info.textContent = "You voted for contestant #" + selected;
+      } else {
+        info.textContent = "No contestant selected";
+      }
+
+      // Fake payment
+      function pay() {
+        const button = document.querySelector("button");
+
+        button.innerHTML = "Processing...";
+        button.disabled = true;
+
+        setTimeout(() => {
+          alert("Payment Successful!");
+
+          // Redirect back
+          window.location.href = "index.html";
+        }, 2000);
+      }
+    </script>
+  </body>
+</html>
+
+<!--<!doctype html>
+<html>
+  <head>
+    <title>Payment</title>
+  </head>
+  <body>
+    <h2>Complete Your Vote Payment</h2>
+
+    <p id="info"></p>
+
+    <button onclick="pay()">Pay Now</button>
+
+    <script>
+      const info = document.getElementById("info");
+
+      // show selected image info
+      const selected = localStorage.getItem("selectedImage");
+      info.textContent = "You voted for image #" + selected;
+
+      // fake payment
+      function pay() {
+        alert("Payment Successful!");
+
+        // redirect back
+        window.location.href = "index.html";
+      }
+    </script>
+  </body>
+</html>-->

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -16,15 +16,6 @@
       }
     </script>
 
-    <script>
-      if (!localStorage.getItem("theme")) {
-        if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
-          body.classList.add("dark");
-        } else {
-          body.classList.add("light");
-        }
-      }
-    </script>
     <div id="topBar"></div>
     <!-- <div class="count-down-div">
       <p class="time-left">Time Left Until Election Day</p>
@@ -156,7 +147,7 @@
           >
             <div class="imgcontainer">
               <span
-                onclick="document.getElementById('id01').style.display='none'"
+                onclick="document.getElementById('id01').style.display = 'none'"
                 class="close"
                 title="Close Modal"
                 >&times;</span
@@ -191,7 +182,7 @@
             <div class="container" style="background-color: #f1f1f1">
               <button
                 type="button"
-                onclick="document.getElementById('id01').style.display='none'"
+                onclick="document.getElementById('id01').style.display = 'none'"
                 class="cancelbtn all-btn"
               >
                 Cancel

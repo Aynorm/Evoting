@@ -1,186 +1,98 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Validated Form</title>
-    <link rel="stylesheet" href="style.css" />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial;
-      }
-
-      body {
-        background: #f3f3f3;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-
-      .container {
-        background: #fff;
-        padding: 25px;
-        width: 350px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px #ccc;
-      }
-
-      h2 {
-        text-align: center;
-        margin-bottom: 20px;
-      }
-
-      .input-group {
-        margin-bottom: 15px;
-      }
-
-      label {
-        font-weight: bold;
-      }
-
-      input {
-        width: 100%;
-        padding: 10px;
-        margin-top: 5px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
-
-      small {
-        color: red;
-        display: block;
-        margin-top: 3px;
-        height: 15px;
-      }
-
-      button {
-        width: 100%;
-        padding: 10px;
-        background: royalblue;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-      }
-
-      button:hover {
-        background: #305dc9;
-      }
-
-      #successBox {
-        margin-top: 20px;
-        padding: 10px;
-        background: #4caf50;
-        color: white;
-        border-radius: 5px;
-        text-align: center;
-      }
-
-      .hidden {
-        display: none;
-      }
-    </style>
+    <title>Admin Panel</title>
   </head>
   <body>
-    <div class="container">
-      <h2>Registration Form</h2>
+    <style>
+      .main-div {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+      }
 
-      <form id="regForm">
-        <div class="input-group">
-          <label>Full Name</label>
-          <input type="text" id="fullname" placeholder="Enter full name" />
-          <small></small>
-        </div>
+      .div-con {
+        background-color: red;
+      }
 
-        <div class="input-group">
-          <label>Email</label>
-          <input type="email" id="email" placeholder="Enter your email" />
-          <small></small>
-        </div>
+      .banner {
+        max-width: 80%;
+        border-radius: 14px;
+      }
+    </style>
+    <!-- <h2>Admin Control</h2>
 
-        <div class="input-group">
-          <label>Password</label>
-          <input type="password" id="password" placeholder="Enter password" />
-          <small></small>
-        </div>
+    <button onclick="resetVotes()">Reset Votes</button>
+    <button onclick="addVoteA()">Add Vote to A</button>
+    <button onclick="addVoteB()">Add Vote to B</button>
 
-        <button type="submit">Submit</button>
-      </form>
+    <h3>Live Results:</h3>
+    <p id="result"></p> -->
 
-      <!-- Success Message -->
-      <div id="successBox" class="hidden">
-        <p>Form submitted successfully 🎉</p>
-      </div>
-    </div>
+    <input type="file" id="imageInput" />
+    <div id="gallery"></div>
+    <script>
+      const imageInput = document.getElementById("imageInput");
+      const gallery = document.getElementById("gallery");
 
-    <script src="script.js">
-      document.getElementById("regForm").addEventListener("submit", function(e){
-        e.preventDefault();
+      imageInput.addEventListener("change", function () {
+        const file = imageInput.files[0];
+        if (!file) return;
 
-        const fullname = document.getElementById("fullname");
-        const email = document.getElementById("email");
-        const password = document.getElementById("password");
-
-        let valid = true;
-
-        // Fullname
-        if(fullname.value.trim() === ""){
-          setError(fullname, "Full name is required");
-          valid = false;
-        } else {
-          setSuccess(fullname);
+        //check if it's an image
+        if (!file.type.startsWith("image/")) {
+          alert("Please insert an image file");
+          return;
         }
 
-        // Email
-        if(email.value.trim() === ""){
-          setError(email, "Email is required");
-          valid = false;
-        } else if(!validateEmail(email.value)) {
-          setError(email, "Enter a valid email");
-          valid = false;
-        } else {
-          setSuccess(email);
-        }
+        const reader = new FileReader();
 
-        // Password
-        if(password.value.length < 6){
-          setError(password, "Password must be at least 6 characters");
-          valid = false;
-        } else {
-          setSuccess(password);
-        }
+        reader.onload = function (e) {
+          const img = document.createElement("img");
+          img.src = e.target.result;
+          img.classList.add("banner");
 
-        // If valid, show success box
-        if(valid){
-          document.getElementById("successBox").classList.remove("hidden");
-        }
+          gallery.innerHTML = ""; //clear previous image
+          gallery.appendChild(img);
+        };
 
+        reader.readAsDataURL(file);
       });
+      // function getVotes() {
+      //   return JSON.parse(localStorage.getItem("votes")) || { A: 0, B: 0 };
+      // }
 
-      // Set Error
-      function setError(input, message){
-        const group = input.parentElement;
-        group.querySelector("small").innerText = message;
-        input.style.borderColor = "red";
-      }
+      // function saveVotes(votes) {
+      //   localStorage.setItem("votes", JSON.stringify(votes));
+      //   displayVotes();
+      // }
 
-      // Set Success
-      function setSuccess(input){
-        const group = input.parentElement;
-        group.querySelector("small").innerText = "";
-        input.style.borderColor = "green";
-      }
+      // function resetVotes() {
+      //   saveVotes({ A: 0, B: 0 });
+      // }
 
-      // Email validator
-      function validateEmail(email){
-        const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-        return pattern.test(email);
-      }
+      // function addVoteA() {
+      //   let votes = getVotes();
+      //   votes.A++;
+      //   saveVotes(votes);
+      // }
+
+      // function addVoteB() {
+      //   let votes = getVotes();
+      //   votes.B++;
+      //   saveVotes(votes);
+      // }
+
+      // function displayVotes() {
+      //   let votes = getVotes();
+      //   document.getElementById("result").innerText =
+      //     `A: ${votes.A} | B: ${votes.B} `;
+      // }
+
+      // // Auto refresh every 1 second
+      // setInterval(displayVotes, 1000);
+
+      // displayVotes();
     </script>
   </body>
 </html>

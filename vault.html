@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Image Manager with Captions</title>
+    <link rel="stylesheet" href="vault.css" />
+    <style></style>
+  </head>
+  <body>
+    <!-- <h1>Image Manager with Captions</h1>
+
+    <input type="file" id="imageInput" accept="image/*" multiple /> -->
+
+    <h1>Miss Nigeria</h1>
+
+    <div class="gallery" id="gallery"></div>
+
+    <script>
+      const gallery = document.getElementById("gallery");
+
+      // 📦 Get images
+      function getImages() {
+        return JSON.parse(localStorage.getItem("gallery")) || [];
+      }
+
+      // 📦 Get votes
+      function getVotes() {
+        return JSON.parse(localStorage.getItem("votes")) || {};
+      }
+
+      // 💾 Save votes
+      function saveVotes(votes) {
+        localStorage.setItem("votes", JSON.stringify(votes));
+      }
+
+      // 🖼️ Display images + voting
+      function displayImages() {
+        gallery.innerHTML = "";
+
+        const images = getImages();
+        const votes = getVotes();
+
+        images.forEach((item, index) => {
+          const box = document.createElement("div");
+          box.classList.add("image-box");
+
+          const img = document.createElement("img");
+          img.src = item.src;
+
+          const caption = document.createElement("div");
+          caption.textContent = item.caption;
+
+          const voteCount = document.createElement("p");
+          voteCount.textContent = "Votes: " + (votes[index] || 0);
+
+          const voteBtn = document.createElement("button");
+          voteBtn.textContent = "Vote";
+
+          voteBtn.onclick = function () {
+            let votes = getVotes();
+
+            votes[index] = (votes[index] || 0) + 1;
+            saveVotes(votes);
+
+            // save selected image for payment
+            localStorage.setItem("selectedImage", index);
+
+            // go to payment page
+            window.location.href = "payment.html";
+          };
+
+          box.appendChild(img);
+          box.appendChild(caption);
+          box.appendChild(voteCount);
+          box.appendChild(voteBtn);
+
+          gallery.appendChild(box);
+        });
+      }
+
+      // auto refresh
+      setInterval(displayImages, 1000);
+      displayImages();
+    </script>
+  </body>
+</html>

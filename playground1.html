@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Vote</title>
+  </head>
+  <body>
+    <h2>Vote Your Choice</h2>
+
+    <button onclick="vote('A')">Vote A</button>
+    <button onclick="vote('B')">Vote B</button>
+
+    <h3>Results:</h3>
+    <p id="result"></p>
+
+    <script>
+      function getVotes() {
+        return JSON.parse(localStorage.getItem("votes")) || { A: 0, B: 0 };
+      }
+
+      function vote(option) {
+        let votes = getVotes();
+        votes[option]++;
+        localStorage.setItem("votes", JSON.stringify(votes));
+        displayVotes();
+      }
+
+      function displayVotes() {
+        let votes = getVotes();
+        document.getElementById("result").innerText =
+          `A: ${votes.A} | B: ${votes.B}`;
+      }
+
+      displayVotes();
+    </script>
+  </body>
+</html>
