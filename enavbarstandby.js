@@ -4,7 +4,7 @@ export const desktopNav =
 <div class='sub-welcome'><h1>Welcome</h1>\
 <div class='div-desktopbtn-reg-contact'>\
 <a href='https://aynorm.github.io/Evoting/eform'><button class='desktopbtn-reg-contact'>Register</button></a>\
-<a href='https://aynorm.github.io/Evoting/econtact'><button class='desktopbtn-reg-contact'>Contact</button></a></div></div>\
+<a href='https://aynorm.github.io/Evoting/login'><button class='desktopbtn-reg-contact'>Log In</button></a></div></div>\
 <div class='div-light-dark-hello'>\
 <div class='div-background-switch' style='display: flex'><button class='lightBtn' onclick='myTheme()'><input class='switch-input' type='checkbox'></button><p>dark/light</p></div>\
 <div class='div-hello-user'><h3>Hello, <span class='user-span'><img class='img-user' src='pictures/user.png' alt='user'></span></h3></div>\
@@ -17,7 +17,7 @@ export const topBar =
   <div class='div-dsp-logo'><img class='dsp-logo' src='real estate logo.png' alt='dsp-logo'><p class='p-logo'><a href='https://aynorm.github.io/Evoting/evoting.html#'>E-Voting</a></p></div>\
   <div class='div-desktopbtn-reg-contact'>\
   <div class=''><a href='https://aynorm.github.io/Evoting/eform'><button class='desktopbtn-reg-contact'>Register</button></a></div>\
-  <div class=''><a href='https://aynorm.github.io/Evoting/econtact'><button class='desktopbtn-reg-contact'>Contact</button></a></div><button class='lightBtn' onclick='myTheme()'><input class='switch-input' type='checkbox'></button>\
+  <div class=''><a href='https://aynorm.github.io/Evoting/login'><button class='desktopbtn-reg-contact'>LogIn</button></a></div><button class='lightBtn' onclick='myTheme()'><input class='switch-input' type='checkbox'></button>\
   </div>\
   </div>\
   ";
